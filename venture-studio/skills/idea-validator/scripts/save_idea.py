@@ -15,22 +15,13 @@ import os
 import sys
 import json
 import argparse
+from pathlib import Path
 from datetime import datetime
 
-try:
-    from supabase import create_client, Client
-except ImportError:
-    print(json.dumps({"error": "supabase-py not installed. Run: pip install supabase"}))
-    sys.exit(1)
+sys.path.insert(0, str(Path(__file__).resolve().parents[4]))
+from shared.db import get_client
 
-SUPABASE_URL = os.environ.get("SUPABASE_URL")
-SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
-
-if not SUPABASE_URL or not SUPABASE_KEY:
-    print(json.dumps({"error": "SUPABASE_URL and SUPABASE_KEY must be set in ~/.hermes/.env"}))
-    sys.exit(1)
-
-db: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+db = get_client()
 
 
 def save_idea(text: str, title: str = None, domain: str = None, source: str = "telegram") -> dict:
