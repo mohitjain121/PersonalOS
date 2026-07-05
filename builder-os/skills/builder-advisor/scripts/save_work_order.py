@@ -13,6 +13,7 @@ Usage:
     python save_work_order.py complete --id <uuid> --status done --result-summary "..." --commit-sha <sha>
     python save_work_order.py get --id <uuid>
     python save_work_order.py list --status draft
+    python save_work_order.py delete --id <uuid>
 """
 
 import sys
@@ -109,6 +110,12 @@ def list_work_orders(status: str = None, limit: int = 20) -> list:
     return res.data or []
 
 
+def delete_work_order(work_order_id: str) -> dict:
+    """Permanently remove a Work Order row (for clearing throwaway/test rows)."""
+    res = db.table("builder_work_orders").delete().eq("id", work_order_id).execute()
+    return {"deleted": True, "id": work_order_id} if res.data else {"error": "Not found"}
+
+
 def main():
     parser = argparse.ArgumentParser(description="builder-os Work Order operations")
     subparsers = parser.add_subparsers(dest="command")
@@ -148,6 +155,9 @@ def main():
     p_list.add_argument("--status", choices=VALID_STATUSES)
     p_list.add_argument("--limit", type=int, default=20)
 
+    p_delete = subparsers.add_parser("delete")
+    p_delete.add_argument("--id", required=True, dest="work_order_id")
+
     args = parser.parse_args()
 
     try:
@@ -182,6 +192,8 @@ def main():
             result = get_work_order(args.work_order_id)
         elif args.command == "list":
             result = list_work_orders(args.status, args.limit)
+        elif args.command == "delete":
+            result = delete_work_order(args.work_order_id)
         else:
             parser.print_help()
             sys.exit(1)
