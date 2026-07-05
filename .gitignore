@@ -1,26 +1,3 @@
-# External dependency — cloned separately, see README setup step.
-# Anchored to root only — shared-skills/agent-reach/ (our own in-house
-# routing skill) must NOT be excluded by this.
-/agent-reach/
-
-# Personal/machine-specific Claude Code config
-.claude/settings.local.json
-
-# Secrets
-.env
-.env.*
-!.env.example
-
-# Python
 __pycache__/
 *.pyc
-*.egg-info/
-.venv/
-venv/
-
-# Node
-node_modules/
-
-# OS cruft
-.DS_Store
-Thumbs.db
+venture-studio/skills/idea-validator/tmp/

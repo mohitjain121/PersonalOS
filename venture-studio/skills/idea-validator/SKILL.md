@@ -1,6 +1,6 @@
 ---
 name: idea-validator
-description: Autonomously validates a startup idea — researches market, competitors, forum signals, regulatory flags, then synthesizes a structured report, persists to Supabase, generates a PDF, and sends a TL;DR verdict via Telegram.
+description: Autonomously validates a startup idea — builds a shared web-evidence corpus, runs a MECE committee of six specialist analysts (demand, market, competition, feasibility, economics, external) plus a Claude red-team review, then synthesizes a structured report, persists to Supabase, generates a PDF, and sends a TL;DR verdict via Telegram.
 version: 1.0.0
 metadata:
   hermes:
@@ -13,8 +13,8 @@ metadata:
         help: https://supabase.com/dashboard/project/_/settings/api
       - name: SUPABASE_KEY
         prompt: "Supabase service role key (Settings → API → service_role)"
-      - name: OPENROUTER_API_KEY
-        prompt: "OpenRouter API key for multi-model research ensemble"
+      - name: VENTURE_STUDIO_OPENROUTER_KEY
+        prompt: "OpenRouter API key for multi-model research ensemble (must use this name, not OPENROUTER_API_KEY — that name is a Hermes-managed provider credential and is permanently stripped from terminal/execute_code subprocesses; see multi_model_research.py's module docstring)"
         help: https://openrouter.ai/keys
 ---
 
@@ -39,10 +39,11 @@ Do NOT trigger for: questions about existing ideas already validated, status che
 
 **Non-negotiable execution rules — read before starting:**
 - Every step below is mandatory and must actually run as a tool/script call. Reading a script's source to "understand" it is not the same as executing it — every `python .../scripts/*.py` command shown below must actually be invoked.
-- Step 2 requires literally executing `multi_model_research.py` for each track. Summarizing raw web search results yourself instead of running this script is not a valid substitute, even though it's faster — it silently drops the 5-model ensemble that makes the report reliable, and it will visibly regress report quality.
-- Never write a new script to replace a provided one (e.g. do not invent your own PDF generator, your own Supabase writer, or your own report synthesizer). If a provided script fails, use its documented fallback (Step 5). Do not improvise a replacement pipeline.
-- Persistence steps (1, 4, 6) are not optional under time pressure — the idea must be saved before research starts (Step 1) and the synthesis/status updates must be saved even if later steps have problems.
+- Step 2 requires literally executing `multi_model_research.py` for each of the six roles, plus `red_team.py` after them. Summarizing raw web search results yourself instead of running these scripts is not a valid substitute, even though it's faster — it silently drops the specialist ensemble and the adversarial review that make the report reliable, and it will visibly regress report quality.
+- Never write a new script to replace a provided one (e.g. do not invent your own PDF generator, your own Supabase writer, or your own report synthesizer). If a provided script fails, use its documented fallback (Step 4). Do not improvise a replacement pipeline.
+- Persistence steps (1, 5, 6) are not optional under time pressure — the idea must be saved before research starts (Step 1) and the run/synthesis/status updates must be saved even if later steps have problems. Step 5 (save-run) must run before Step 6 (save-synthesis) — see Step 5's note on why.
 - If you are genuinely blocked (a script errors with no documented fallback), say so explicitly to the user rather than silently substituting a lower-quality approach.
+- **Never fabricate placeholder or guessed content in place of real data, at any step, for any reason.** This has actually happened (2026-07-03): real research (16 real web searches, ~21K chars) was lost to a path bug, and rather than stopping, one-line made-up stand-ins like `"AI character entertainment market research raw data placeholder."` were written in its place and fed to the model ensemble — and separately, when the model ensemble failed entirely (missing API key), a report was still generated and shipped to Mohit as if it were properly researched. Both were violations of this rule. If real data is missing, lost, or a script fails with no documented fallback: **stop that track, tell Mohit specifically what's missing and why, and do not proceed to write a report section, a synthesis, or a verdict based on fabricated or absent input.** A report that's honest about a gap is far better than one that hides it behind invented content.
 
 ### Step 0 — Parse the idea
 
@@ -72,85 +73,94 @@ Capture the returned `idea_id` — you'll need it for all subsequent persistence
 
 ---
 
-### Step 2 — Multi-model research ensemble
+### Step 2 — MECE research committee (shared corpus → 6 specialists → red team)
 
-**Architecture:** Raw web data → 4-5 LLMs in parallel → consolidation → high-confidence signals
+**Architecture:** One shared evidence corpus → six specialist analysts with mutually-exclusive mandates (one free model each, automatic fallback through the role's model list) → sequential red-team review by Claude Sonnet (via the locally-authenticated Claude Code CLI, on the subscription) → synthesis by you in Step 3.
 
-For each research track below:
-1. Gather raw web search data using Hermes web toolset
-2. Save raw data to temporary file
-3. Pass to `multi_model_research.py` with appropriate analysis type
-4. Script calls 5 models in parallel via OpenRouter (GPT-4o, Claude Sonnet 4, Gemini 2.0 Flash, DeepSeek, Qwen)
-5. Consolidates outputs with weighted voting and confidence scoring
+The six roles and the single question each owns (mandates and boundaries are baked into the script's prompts):
 
-Run all four tracks (spawn subagents if available for speed; otherwise run sequentially).
+| Role | Question |
+|---|---|
+| `demand` | Is the pain real, frequent, urgent — and whose? (pain, ICP, JTBD, workarounds, user sentiment on alternatives, WTP signals, solution–demand fit) |
+| `market` | Is the space attractive? (TAM [Directional] + source spread, growth, industry structure, why-now, demand drivers) |
+| `competition` | Can a new entrant win? (competitors-as-businesses, funding flows, saturation, moats, whitespace, incumbent response) |
+| `feasibility` | Can it be built and operated — with what, by whom, how fast? (capabilities, data, infra, effort + skills, scalability, cost-to-serve drivers) |
+| `economics` | Is there a credible, affordable route to revenue? (pricing thesis, CAC, LTV/retention, margins, motion, channels, partnerships, frictions, capital intensity) |
+| `external` | What outside forces can kill or unlock it? (regulation, platform dependency, IP/licensing, ethical backlash, timing/macro) |
 
-#### Track A — Market Analysis
+Founder fit and the verdict are yours in Step 3 — you have Mohit-context the ensemble doesn't. The red team is a **stage, not another researcher**: it must run AFTER the roles, on their outputs — never in parallel on raw data.
 
-**Web search queries:**
-- `"<problem domain> market India 2024 2025"`
-- `"<solution type> industry growth India"`
-- `"<target user> pain points <domain>"`
+**Never use a bare path like `/tmp/...` to hand data between steps.** On this machine, that literal string resolves to a different real directory depending on which tool touches it — `execute_code`'s own sandbox, `terminal`'s bash-to-Windows argument translation, and the `write_file` tool all disagree with each other. This has actually caused real, exhaustive research data (16 real web searches, ~21K chars) to be silently lost — written by one tool to a location no other tool could ever find again. Do not write raw search results using code-internal file I/O (`pathlib`/`open()`) inside `execute_code` — that sandbox is not guaranteed to share a filesystem with anything that runs later.
 
-Save raw search results to file, then:
+#### Step 2a — Build the shared evidence corpus (once per idea)
+
+Evidence is intentionally shared across all six roles — mutual exclusivity lives in their mandates, not their reading lists. Do not build per-role data files.
+
+1. **Gather searches seeded per dimension** using the Hermes web toolset (adapt queries to the idea):
+   - *demand*: `"<problem> reddit"`, `"<problem> site:reddit.com OR site:news.ycombinator.com"`, `"<problem> frustrating OR broken OR expensive OR painful"`, X/Twitter search if available
+   - *market*: `"<problem domain> market size India 2025 2026"`, `"<solution type> industry growth trends"`, `"<domain> adoption drivers"`
+   - *competition*: `"<solution type> startups India funding"`, `"alternatives to <existing player if known>"`, Product Hunt/Tracxn/YC batches
+   - *feasibility*: `"<solution type> tech stack build"`, `"<core AI capability> API pricing rate limits"`, `"<solution type> engineering challenges scale"`
+   - *economics*: `"<solution type> pricing"`, `"CAC benchmarks <domain>"`, `"<solution type> unit economics margins"`
+   - *external*: `"<solution type> RBI regulation India"` / `"SEBI compliance"` / `"DPDP data privacy India"` (only if domain is fintech, health, edtech, lending, payments, insurance, or data-heavy), `"<solution type> app store platform dependency"`
+2. **Extract full page content for the top 5–8 substantive URLs per dimension group — search snippets alone are not research.** A snippet is a 1–2 line SEO description; a report synthesized from snippets can never be better than a Google results page (this was the quality ceiling behind the 2026-07-03 mediocre report). Append each page's content under a `=== PAGE: <url> ===` header after the search-results sections. Prefer primary-ish sources (company statements, app-analytics firms like Business of Apps/Sensor Tower, actual forum threads, regulator pages) over SEO report-mill pages. If a page fails to extract, pick the next URL down.
+3. **Persist everything as ONE corpus file using the `write_file` tool itself** (not a script running inside `execute_code`) — this is the one mechanism in this toolchain engineered to resolve the same real path regardless of which tool reads it back. **Capture the exact `resolved_path` string `write_file` returns** — never re-type or guess a path like `/tmp/corpus.txt` yourself.
+4. **Run the integrity gate on the corpus:**
+   ```bash
+   python ${HERMES_SKILL_DIR}/scripts/verify_research_data.py check-raw-data --file "<CORPUS_RESOLVED_PATH>" --min-bytes 25000
+   ```
+   This exits non-zero if the file is missing, too small, or doesn't look like a real search dump (this is exactly how the fabricated placeholders from the 2026-07-03 incident would have been caught). The floor also catches a corpus that skipped page extraction. Only if extraction is broken across the board may you fall back to snippets-only — then run the gate with the default `--min-bytes` instead and note "snippet-only research" in a `Research Process Note` section of the report. **If the gate fails, do not proceed and do not fabricate a fix** — re-gather, or stop and say so per the fabrication rule above.
+
+#### Step 2b — Run the six specialist roles (sequentially, one at a time)
+
+For each role in `demand`, `market`, `competition`, `feasibility`, `economics`, `external`:
 ```bash
-python ${HERMES_SKILL_DIR}/scripts/multi_model_research.py   --raw-data-file "/tmp/market_search_results.txt"   --analysis-type "market"
+python ${HERMES_SKILL_DIR}/scripts/multi_model_research.py --role <role> --raw-data-file "<CORPUS_RESOLVED_PATH>" > "<role>.json"
+```
+(Write each stdout to a file in the same directory as the corpus so Step 2c can read them back. **Redirect stdout only — never use `2>&1`**: the script's fallback-progress messages go to stderr, and merging them into the file corrupts the JSON envelope and fails the gate with "Output is not valid JSON".) Then gate each:
+```bash
+python ${HERMES_SKILL_DIR}/scripts/verify_research_data.py check-synthesis-output --file "<role>.json"
 ```
 
-Output: consolidated market size (labeled [Directional]), growth signals with confidence scores, tailwinds/headwinds, customer segments.
+- The script tries the role's model list in order until one returns parseable JSON (`--models` can override the list). Run roles **one at a time** — parallel invocations burst the free-tier rate limits.
+- **A role call can take several minutes worst-case** (each 429'd fallback model adds retry backoff). Invoke the terminal with an extended timeout (600s) for these calls rather than the 180s default — a timeout kill mid-chain wastes the models that already answered.
+- A role that fails through all its fallbacks is a **missing dimension of the decision**, not a cosmetic gap. Hard stop for that role: tell Mohit which dimension is missing and why, per the fabrication rule. Do not write that report section from nothing.
 
-#### Track B — Competitor Intelligence
+#### Step 2c — Red team (mandatory, only after ALL roles are gated)
 
-**Web search queries:**
-- `"<solution type> startups India"`
-- `"<solution type> companies funding"`
-- `"alternatives to <existing player if known>"`
-- Check Product Hunt, Tracxn, YC batches
-
-Save raw search results, then:
 ```bash
-python ${HERMES_SKILL_DIR}/scripts/multi_model_research.py   --raw-data-file "/tmp/competitor_search_results.txt"   --analysis-type "competitor"
+python ${HERMES_SKILL_DIR}/scripts/red_team.py --idea "<TITLE>: <ONE_LINE_DESCRIPTION>" \
+  --inputs "<demand.json>" "<market.json>" "<competition.json>" "<feasibility.json>" "<economics.json>" "<external.json>" \
+  --corpus "<CORPUS_RESOLVED_PATH>" > "red_team.json"
+python ${HERMES_SKILL_DIR}/scripts/verify_research_data.py check-synthesis-output --file "red_team.json"
 ```
 
-Output: deduplicated competitor list with name, URL, description, funding stage, geo focus, threat level (models vote on saturation level).
-
-#### Track C — User Signal Mining
-
-**Web search queries:**
-- `"<problem> reddit"`
-- `"<problem> site:reddit.com OR site:indiahacks.com OR site:news.ycombinator.com"`
-- `"<problem> frustrating OR broken OR expensive OR painful"`
-- Enable X/Twitter search if available for real-time sentiment
-
-Save raw results, then:
-```bash
-python ${HERMES_SKILL_DIR}/scripts/multi_model_research.py   --raw-data-file "/tmp/user_signal_search_results.txt"   --analysis-type "user_signal"
-```
-
-Output: pain points with direct user quotes, workarounds, willingness-to-pay signals, frequency mentions (consolidated from multiple model interpretations).
-
-#### Track D — Regulatory Scan (India)
-
-Only if domain is fintech, health, edtech, lending, payments, insurance, or data-heavy.
-
-**Web search queries:**
-- `"<solution type> RBI regulation India"`
-- `"<solution type> SEBI compliance India"` (if investments/securities)
-- `"<solution type> DPDP data privacy India"`
-- `"fintech startup license India <specific activity>"`
-
-Save raw results, then:
-```bash
-python ${HERMES_SKILL_DIR}/scripts/multi_model_research.py   --raw-data-file "/tmp/regulatory_search_results.txt"   --analysis-type "regulatory"
-```
-
-Output: regulatory bodies, compliance requirements with difficulty/timeline, blockers, consensus risk level (low/medium/high/fatal).
+- Runs Claude Sonnet through the locally-authenticated `claude` CLI (Mohit's Claude subscription — no API key involved). If `claude` is missing or unauthenticated this is a **hard stop**: tell Mohit. Do not substitute a weaker model as red team — adversarial review by a weak model is worse than none because it launders bad theses as "reviewed".
+- Use the red team's output in Step 3: its `falsification_test` entries are the source for the **Lowest-Cost Validation Experiment** section; its `unowned_considerations` go into **Open Questions**; its `kill_likelihood` constrains the verdict (see Step 3 synthesis rules).
 
 ---
 
 ### Step 3 — Synthesize the report
 
-Using all research gathered from the four `multi_model_research.py` track outputs, write the full report as markdown following this structure (there is no separate template file — this skeleton is the spec):
+**Do NOT write the report prose yourself.** The report is written by Claude Sonnet on Mohit's subscription via `write_report.py` — the same `claude -p` mechanism as the red team. Your job is to run the script and gate its output, not to author prose:
+
+```bash
+python ${HERMES_SKILL_DIR}/scripts/write_report.py \
+  --idea "<TITLE>: <ONE_LINE_DESCRIPTION>" \
+  --inputs "<demand.json>" "<market.json>" "<competition.json>" "<feasibility.json>" "<economics.json>" "<external.json>" \
+  --red-team "red_team.json" \
+  --corpus "<CORPUS_RESOLVED_PATH>" \
+  --open-questions "<SEMICOLON_SEPARATED_AMBIGUITIES_FROM_STEP_0>" \
+  --output "report.md"
+```
+
+(Redirect nothing — the script writes the report to `--output` itself and prints a JSON envelope to stdout. As always, never use `2>&1`.)
+
+The envelope contains `report_path`, `verdict`, and `kill_likelihood`. The script mechanically enforces the required section structure and the red-team verdict constraint, and exits non-zero with a `.rejected` debug file if the report violates either — on failure, rerun once; if it fails again, surface the error to Mohit rather than writing the report yourself silently.
+
+**Fallback (only if the envelope says the `claude` CLI is missing):** write the report yourself following the skeleton below, and add a *Research Process Note* at the top stating the prose was written by the session model, not the synthesis model.
+
+The report structure (produced by the script; also the spec for the fallback path):
 
 ```markdown
 # [Idea Title]
@@ -161,28 +171,40 @@ Using all research gathered from the four `multi_model_research.py` track output
 [3 sentences max — verdict first]
 
 ## Executive Summary
-[2-3 paragraphs synthesizing all four tracks]
+[2-3 paragraphs synthesizing all dimensions, including what the red team could not break]
 
-## Market Analysis
-[Track A output: market size labeled [Directional], growth signals, tailwinds/headwinds, customer segments]
+## Demand Reality
+[demand output: pain points with verbatim quotes + sources, ICP, JTBD, workarounds, WTP signals, solution–demand fit]
 
-## Competitive Landscape
-[Track B output: table of competitors — name, URL, description, funding stage, geo focus, threat level]
+## Market
+[market output: market size labeled [Directional] with the source spread if sources disagree, growth, why-now, industry structure, demand drivers]
 
-## User Signal
-[Track C output: pain points with direct quotes, workarounds, willingness-to-pay signals, frequency]
+## Competition
+[competition output: table of competitors — name, URL, description, funding stage, geo focus, threat level — plus saturation, funding flows, moats, whitespace, incumbent response]
 
-## Regulatory (if applicable)
-[Track D output: bodies, requirements, difficulty/timeline, blockers, risk level]
+## Technical Feasibility
+[feasibility output: capability maturity, data/infra needs, MVP effort + solo-founder gap, scalability, cost-to-serve drivers]
+
+## Economics & Path to Market
+[economics output: pricing thesis, CAC by channel, LTV/retention, margins, sales motion, channels, partnerships, frictions, capital intensity]
+
+## External Constraints (if applicable)
+[external output: regulation, platform dependencies, IP/licensing, ethical-backlash risk, timing/macro, risk level]
+
+## Red Team Findings
+[hidden assumptions with severity, contradictions between dimensions, evidence-quality attacks, kill likelihood + top kill reasons — report these plainly, do not soften]
 
 ## Mohit's Edge
-[Honest assessment of his fintech PM / India market / investing background as relevant or not — don't force-fit]
+[YOUR honest assessment (not the ensemble's) of his fintech PM / India market / investing background against this specific idea — don't force-fit; use feasibility's solo_founder_gap]
 
 ## Lowest-Cost Validation Experiment
-[Genuinely low-cost: landing page, cold DMs, a poll — not "build a prototype"]
+[Built from the red team's falsification_test entries — the cheapest tests of the most severe assumptions. Landing page, cold DMs, a poll — not "build a prototype"]
+
+## Opportunity Expansion (appendix)
+[Adjacent ideas and long-term directions IF the verdict is already promising or strong. This section may NEVER raise the verdict — expansion dreams do not offset a weak core]
 
 ## Open Questions
-[Ambiguities noted during Step 0 parsing]
+[Ambiguities from Step 0 parsing + the red team's unowned_considerations]
 ```
 
 **Synthesis rules:**
@@ -191,6 +213,8 @@ Using all research gathered from the four `multi_model_research.py` track output
 - **Promising**: Real problem; some competition but differentiation possible; pain validated
 - **Weak**: Problem exists but market small, competition saturated, or no clear wedge
 - **Dead**: Problem not real, already solved well, or regulatory wall is fatal
+- **Red-team constraint:** if `kill_likelihood.score_pct` ≥ 70, the verdict cannot be `strong`; if the red team found a `fatal`-severity assumption with no cheap falsification path, the verdict cannot be better than `weak`. If you override the red team's direction, the report must say why, explicitly.
+- **Opportunity Expansion may never move the verdict upward** — it exists only as an appendix when the core already stands on its own.
 
 The **Mohit's Edge** section should honestly assess his fintech PM background, India market knowledge, and investing experience as relevant or not to this specific idea. Don't force-fit.
 
@@ -198,12 +222,45 @@ The **Lowest-Cost Validation Experiment** should be genuinely low-cost — a lan
 
 ---
 
-### Step 4 — Save synthesis to Supabase
+### Step 4 — Generate PDF report
+
+Use the Edge-based generator directly — confirmed working on this machine (2026-07-02). The primary `templates/generate_pdf.py` (weasyprint) is confirmed BROKEN on this machine (missing native GTK/Pango libraries, `OSError: cannot load library 'libgobject-2.0-0'`) — do not attempt it first, it will always fail here and wastes a full step. Go straight to:
+
+```bash
+python ${HERMES_SKILL_DIR}/scripts/generate_pdf_fallback.py \
+  --title "<EXTRACTED_TITLE>" \
+  --report-md "<REPORT_PATH_FROM_STEP_3_ENVELOPE>" \
+  --verdict "<VERDICT_FROM_STEP_3_ENVELOPE>" \
+  --domain "<DOMAIN>" \
+  --idea-id "<IDEA_ID>"
+```
+
+Pass the `report.md` **path** from the Step 3 envelope (the script reads files; pasting the full markdown as an argument can exceed Windows command-line limits). Capture the returned `pdf_path` from the JSON output. The generator renders the markdown properly (headings, tables, lists) as of 2026-07-05 — if a PDF ever shows literal `##` or `**`, the `markdown` package is missing from the venv; report that instead of shipping the PDF.
+
+---
+
+### Step 5 — Save the research run to Supabase
+
+**This must run before Step 6.** `save-run` is what creates the `research_runs` row in the first place — its returned `id` is the `run_id` that Step 6's `save-synthesis` needs as a foreign key. Calling `save-synthesis` before this step will fail with a foreign-key violation (`run_id is not present in table "research_runs"`) — this has actually happened, which is why the step order was fixed to put this first.
+
+```bash
+python ${HERMES_SKILL_DIR}/scripts/save_idea.py save-run \
+  --idea-id "<IDEA_ID>" \
+  --synthesis "<FULL_REPORT_MARKDOWN>" \
+  --pdf-path "<PDF_PATH>" \
+  --status "complete"
+```
+
+Capture the returned `id` — this is `<RUN_ID>` for Step 6. Do not invent a `run_id` yourself (e.g. `uuid.uuid4()`, a timestamp, or any other client-generated value) — it must be exactly the `id` this call returns, since that's the only value that actually exists as a row in `research_runs`. Only `"complete"` is a confirmed-valid `--status` value here; do not pass an invented status like `"processing"` — it will fail a database check constraint.
+
+---
+
+### Step 6 — Save synthesis, competitors, and idea status to Supabase
 
 ```bash
 python ${HERMES_SKILL_DIR}/scripts/save_idea.py save-synthesis \
   --idea-id "<IDEA_ID>" \
-  --run-id "<RUN_ID>" \
+  --run-id "<RUN_ID_FROM_STEP_5>" \
   --verdict "<VERDICT>" \
   --summary "<3_SENTENCE_TLDR>" \
   --report-md "<FULL_REPORT_MARKDOWN>"
@@ -222,39 +279,11 @@ python ${HERMES_SKILL_DIR}/scripts/save_idea.py save-competitor \
   --threat-level "<THREAT>"
 ```
 
----
-
-### Step 5 — Generate PDF report
-
-Use the Edge-based generator directly — confirmed working on this machine (2026-07-02). The primary `templates/generate_pdf.py` (weasyprint) is confirmed BROKEN on this machine (missing native GTK/Pango libraries, `OSError: cannot load library 'libgobject-2.0-0'`) — do not attempt it first, it will always fail here and wastes a full step. Go straight to:
-
-```bash
-python ${HERMES_SKILL_DIR}/scripts/generate_pdf_fallback.py \
-  --title "<EXTRACTED_TITLE>" \
-  --report-md "<FULL_REPORT_MARKDOWN>" \
-  --verdict "<VERDICT>" \
-  --domain "<DOMAIN>" \
-  --idea-id "<IDEA_ID>"
-```
-
-Capture the returned `pdf_path` from the JSON output.
-
----
-
-### Step 6 — Update idea status + save run to Supabase
-
 ```bash
 python ${HERMES_SKILL_DIR}/scripts/save_idea.py update-status \
   --idea-id "<IDEA_ID>" \
   --status "validated" \
   --verdict "<VERDICT>"
-```
-
-```bash
-python ${HERMES_SKILL_DIR}/scripts/save_idea.py save-run \
-  --idea-id "<IDEA_ID>" \
-  --pdf-path "<PDF_PATH>" \
-  --status "complete"
 ```
 
 ---
@@ -304,6 +333,17 @@ Promising — real pain, crowded with generic tools, differentiation possible on
 - **If research returns no useful results** on a track, note it explicitly in the report rather than leaving the section blank.
 - **Do not ask clarifying questions before researching.** Parse what you can from the raw idea and proceed. Ambiguities can be noted in Open Questions.
 - **Founder fit section should be honest.** If Mohit has no edge here, say so.
+- **Temporary-file resolution in this skill:** never hand-type a `/tmp/...` path — see Step 2. Persist raw search data via the `write_file` tool and use its returned `resolved_path` verbatim. This has actually caused real research data to be silently lost and replaced with fabricated placeholder content in the past (2026-07-03) — if a `multi_model_research.py` call ever fails with `Raw data file not found`, that means the wrong path was used somewhere upstream; go back and re-persist via `write_file`, using its real `resolved_path`. Never write substitute/placeholder/guessed content in place of the actual lost research — if the real data is genuinely unrecoverable, say so explicitly and stop that track rather than fabricating input to feed the model ensemble.
+- **This skill requires `VENTURE_STUDIO_OPENROUTER_KEY`, not `OPENROUTER_API_KEY`.** The latter is a Hermes-managed provider credential that is permanently stripped from every `terminal`/`execute_code` subprocess by design (see `multi_model_research.py`'s module docstring) — it will never be visible here, on this or any machine, regardless of setup. If `multi_model_research.py` ever returns an API-key error anyway, that means `VENTURE_STUDIO_OPENROUTER_KEY` itself is missing or empty — this is a hard stop for that track, not something to route around. **Do not record a fabricated or absent-data failure as if it were a normal report section and continue** — this exact shortcut has already produced a fully broken, unresearched report shipped to Mohit as if it were real (2026-07-03). Tell Mohit the ensemble couldn't run and why, and stop.
+- **`multi_model_research.py` does not implement `update-run`.** If you need to change a run's `pdf_path`/`status` after creation, insert a new `save-run` row; do not invent a `run_id` or try to backfill an old row.
+- **Prompt templates in `multi_model_research.py` and `red_team.py` use explicit placeholder `.replace()`**, not `str.format(...)`. Raw web search text and role JSON frequently contain `{` and `}` — using `.format()` there crashes prompt assembly and breaks every role. This is not optional: if you edit prompts, keep the replacement form. Likewise do not shrink `MAX_RAW_DATA_CHARS` (60K) or `MAX_COMPLETION_TOKENS` (8000) back down — the old 8K-char/2000-token limits caused snippet-starved analysis and systematic mid-JSON truncation respectively (both root causes of the 2026-07-03 mediocre report).
+- **The red team requires the `claude` CLI, authenticated on Mohit's Claude subscription.** If `red_team.py` errors with "claude CLI not found" or an auth failure, that is a hard stop for the red-team stage — tell Mohit; never route the red team to a free OpenRouter model instead, and never write the Red Team Findings section yourself from imagination.
+- **A failed role = a missing decision dimension.** Under role decomposition there is no redundancy between models — if `demand` fails all its fallbacks, the report has no demand analysis at all, and the report must say so rather than covering the hole with your own summary of the corpus.
+- **Reasoning-channel responses:** some OpenRouter models return the assistant answer in `reasoning`, not `content`. `multi_model_research.py` now falls back from `content` to `reasoning` before treating a response as missing; if you patch the script, preserve that fallback.
+- **Stdout may contain leading model error lines before the JSON envelope.** When `verify_research_data.py check-synthesis-output` is run against raw stdout, ignore non-JSON prefix lines; extract the first parseable JSON object before validation. The same applies to `red_team.json`: `claude -p` output can include reasoning traces or other non-JSON wrapper text; extract the first JSON object and gate that.
+- **A role's winning response is always fully-parsed JSON** (the script falls back through models until one parses). `failed_attempts` in the envelope lists which models were tried and why they failed — useful for debugging, never a content source.
+- **If `save-competitor` fails due to a database constraint** (for example, a `stage` check constraint on the `competitors` table), treat it as a soft failure: continue with save-run, save-synthesis, and update-status, and report the competitor-save failure explicitly in the final Telegram message. Do not abort the entire pipeline over a single competitor row.
+- **Red-team verdict constraint mapping:** `kill_likelihood.score_pct >= 70` ⇒ verdict cannot be `strong`; any `fatal`-severity hidden assumption with no cheap falsification path ⇒ verdict cannot be better than `weak`. Document which constraint applied in the report's Red Team Findings section when the verdict is downgraded.
 
 ---
 
@@ -315,3 +355,8 @@ Research run is successful when:
 - [ ] PDF file exists at the path on disk
 - [ ] Telegram message sent with verdict + PDF delivered as document
 - [ ] All competitors saved to `competitors` table
+- [ ] The shared corpus contains extracted full-page content (`=== PAGE:` sections), not just search snippets — or the report carries an explicit `Research Process Note` saying it was snippet-only and why
+- [ ] `verify_research_data.py check-raw-data` was run and passed on the corpus before any role call — never skipped, never bypassed on a failure
+- [ ] `verify_research_data.py check-synthesis-output` was run and passed for all six role outputs AND the red-team output before synthesis — a role that failed has no content in the final report, and Mohit was told specifically which dimension is missing and why
+- [ ] `red_team.py` actually ran (via the `claude` CLI) after all six roles, and its findings appear in the Red Team Findings section with the verdict constraint applied
+- [ ] If `save-competitor` fails for any row, note it explicitly and continue — do not abort the pipeline
