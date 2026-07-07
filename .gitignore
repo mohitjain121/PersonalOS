@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 venture-studio/skills/idea-validator/tmp/
+/agent-reach/
+/last30days-skill/
+.claude/settings.local.json
