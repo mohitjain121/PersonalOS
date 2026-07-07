@@ -108,5 +108,80 @@
     "mtime": 1782411485.447137,
     "ast_hash": "abdf07048214112080ca730022b9eeb2",
     "semantic_hash": "abdf07048214112080ca730022b9eeb2"
+  },
+  ".claude/settings.json": {
+    "mtime": 1783451400.9936213,
+    "ast_hash": "e012488b7225187491806a0130c16a09",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1783451400.9916253,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": ""
+  },
+  "ROADMAP.md": {
+    "mtime": 1783160910.2961457,
+    "ast_hash": "f9ad57e123ecbc52afb21a815b59171e",
+    "semantic_hash": ""
+  },
+  "shared-skills/graphify/references/add-watch.md": {
+    "mtime": 1783449240.990922,
+    "ast_hash": "d59d027fe449f06aa03905a01184e779",
+    "semantic_hash": ""
+  },
+  "shared-skills/graphify/references/exports.md": {
+    "mtime": 1783449240.990922,
+    "ast_hash": "9da2a2152e60a22f07f05fed5158f287",
+    "semantic_hash": ""
+  },
+  "shared-skills/graphify/references/extraction-spec.md": {
+    "mtime": 1783449240.991924,
+    "ast_hash": "42fef56a01698118f7fd722acdadea34",
+    "semantic_hash": ""
+  },
+  "shared-skills/graphify/references/github-and-merge.md": {
+    "mtime": 1783449240.9929228,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": ""
+  },
+  "shared-skills/graphify/references/hooks.md": {
+    "mtime": 1783449240.9929228,
+    "ast_hash": "aea24fe86e18fe8aeb304403032cfce7",
+    "semantic_hash": ""
+  },
+  "shared-skills/graphify/references/query.md": {
+    "mtime": 1783449240.9939232,
+    "ast_hash": "3c46f8ad006874260614ed8657d02307",
+    "semantic_hash": ""
+  },
+  "shared-skills/graphify/references/transcribe.md": {
+    "mtime": 1783449240.9949236,
+    "ast_hash": "67b6a5fa6c0974e18f60db9f8932fbd8",
+    "semantic_hash": ""
+  },
+  "shared-skills/graphify/references/update.md": {
+    "mtime": 1783449240.9949236,
+    "ast_hash": "c698309979460d0f02ba616417844399",
+    "semantic_hash": ""
+  },
+  "venture-studio/.hermes/CONTEXT.md": {
+    "mtime": 1782465469.9993062,
+    "ast_hash": "fa13d3a967a39da11056c7bc66a9ab6c",
+    "semantic_hash": ""
+  },
+  "venture-studio/skills/idea-validator/SKILL.md": {
+    "mtime": 1783450512.568875,
+    "ast_hash": "e2beb4b6bd8b53b3f489812b51d5a409",
+    "semantic_hash": ""
+  },
+  "venture-studio/skills/idea-validator/references/debugging-and-verification.md": {
+    "mtime": 1783162714.7184544,
+    "ast_hash": "f27a48dac10b28d3528c9fc1dddda08e",
+    "semantic_hash": ""
+  },
+  "venture-studio/skills/idea-validator/reports/20260703-AI-Character-Entertainment-Platform.md": {
+    "mtime": 1783096339.1102686,
+    "ast_hash": "38e7f244c5fced947a8e492943c07f80",
+    "semantic_hash": ""
   }
 }

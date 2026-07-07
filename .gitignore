@@ -4,3 +4,6 @@ venture-studio/skills/idea-validator/tmp/
 /agent-reach/
 /last30days-skill/
 .claude/settings.local.json
+graphify-out/cache/
+graphify-out/20*/
+graphify-out/.graphify_root
