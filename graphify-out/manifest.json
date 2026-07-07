@@ -1,0 +1,112 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1783451400.7313702,
+    "ast_hash": "37f72fa3a1ad9d51266fe015af1faf1f",
+    "semantic_hash": "37f72fa3a1ad9d51266fe015af1faf1f"
+  },
+  "builder-os/skills/builder-advisor/scripts/save_discovery.py": {
+    "mtime": 1783059780.7595148,
+    "ast_hash": "9a748a637a9cafe260d9651d154e7104",
+    "semantic_hash": "9a748a637a9cafe260d9651d154e7104"
+  },
+  "builder-os/skills/builder-advisor/scripts/save_work_order.py": {
+    "mtime": 1783067367.211604,
+    "ast_hash": "fee992730b0eb5e2d8a7a3b620f502a0",
+    "semantic_hash": "fee992730b0eb5e2d8a7a3b620f502a0"
+  },
+  "builder-os/supabase/schema.sql": {
+    "mtime": 1783005267.7117379,
+    "ast_hash": "7679fad9fbc5a3da24b04f822d723261",
+    "semantic_hash": "7679fad9fbc5a3da24b04f822d723261"
+  },
+  "shared/db.py": {
+    "mtime": 1782998103.6787941,
+    "ast_hash": "ae4c0bf28a3386d367ee0b24250d2efe",
+    "semantic_hash": "ae4c0bf28a3386d367ee0b24250d2efe"
+  },
+  "venture-studio/scripts/weekly_digest.py": {
+    "mtime": 1782998181.209752,
+    "ast_hash": "0f167f9fe359ec7a7967d66c53cef19d",
+    "semantic_hash": "0f167f9fe359ec7a7967d66c53cef19d"
+  },
+  "venture-studio/skills/idea-validator/scripts/generate_pdf_fallback.py": {
+    "mtime": 1783231443.7989676,
+    "ast_hash": "6747ceca30797bff5c073322f71c57bd",
+    "semantic_hash": "6747ceca30797bff5c073322f71c57bd"
+  },
+  "venture-studio/skills/idea-validator/scripts/multi_model_research.py": {
+    "mtime": 1783161319.3565264,
+    "ast_hash": "9a6fa4b27cc1097c824e8840a70d8df4",
+    "semantic_hash": "9a6fa4b27cc1097c824e8840a70d8df4"
+  },
+  "venture-studio/skills/idea-validator/scripts/red_team.py": {
+    "mtime": 1783161357.467559,
+    "ast_hash": "ddb937bda686d9134b7f94ca5dc8ce5c",
+    "semantic_hash": "ddb937bda686d9134b7f94ca5dc8ce5c"
+  },
+  "venture-studio/skills/idea-validator/scripts/save_idea.py": {
+    "mtime": 1782998149.4606843,
+    "ast_hash": "10e91096c80f5ca05dcd49e9b40bdbbe",
+    "semantic_hash": "10e91096c80f5ca05dcd49e9b40bdbbe"
+  },
+  "venture-studio/skills/idea-validator/scripts/verify_research_data.py": {
+    "mtime": 1783161329.0542457,
+    "ast_hash": "1765e8784ddbd0c8ec7d42a6c534cb00",
+    "semantic_hash": "1765e8784ddbd0c8ec7d42a6c534cb00"
+  },
+  "venture-studio/skills/idea-validator/scripts/write_report.py": {
+    "mtime": 1783231225.6567476,
+    "ast_hash": "fd8ad32af7b4639674b08afa0edba233",
+    "semantic_hash": "fd8ad32af7b4639674b08afa0edba233"
+  },
+  "venture-studio/skills/idea-validator/templates/generate_pdf.py": {
+    "mtime": 1782564330.7304425,
+    "ast_hash": "b73dff618230f79fe3c0bd499e72a5cb",
+    "semantic_hash": "b73dff618230f79fe3c0bd499e72a5cb"
+  },
+  "venture-studio/supabase/schema.sql": {
+    "mtime": 1782411485.3993611,
+    "ast_hash": "9743f88480de0313f3d25ed1190c5339",
+    "semantic_hash": "9743f88480de0313f3d25ed1190c5339"
+  },
+  "README.md": {
+    "mtime": 1782994267.259535,
+    "ast_hash": "6d0842072da78b22a849b07c5202e185",
+    "semantic_hash": "6d0842072da78b22a849b07c5202e185"
+  },
+  "builder-os/README.md": {
+    "mtime": 1783077021.1788247,
+    "ast_hash": "e6d031a9038cc30e28b73d4eacc29b4c",
+    "semantic_hash": "e6d031a9038cc30e28b73d4eacc29b4c"
+  },
+  "builder-os/skills/builder-advisor/SKILL.md": {
+    "mtime": 1783077900.0840971,
+    "ast_hash": "0167858089e5319861dc9b97c786fd15",
+    "semantic_hash": "0167858089e5319861dc9b97c786fd15"
+  },
+  "docs/adr/0001-personal-ai-os-philosophy.md": {
+    "mtime": 1782998095.6636765,
+    "ast_hash": "58d9bf69334cc1ea56652c76d317f431",
+    "semantic_hash": "58d9bf69334cc1ea56652c76d317f431"
+  },
+  "pair-programmer/README.md": {
+    "mtime": 1783078391.7511683,
+    "ast_hash": "1cdb57e08932b6aa4880200813acee02",
+    "semantic_hash": "1cdb57e08932b6aa4880200813acee02"
+  },
+  "pair-programmer/skills/pair-programmer/SKILL.md": {
+    "mtime": 1783078379.1234114,
+    "ast_hash": "d3eaaf5dc6b7aaef384d273131f97eb5",
+    "semantic_hash": "d3eaaf5dc6b7aaef384d273131f97eb5"
+  },
+  "shared-skills/graphify/SKILL.md": {
+    "mtime": 1783449240.9889228,
+    "ast_hash": "130ab071af516397ea29dd1edaa3d001",
+    "semantic_hash": "130ab071af516397ea29dd1edaa3d001"
+  },
+  "venture-studio/README.md": {
+    "mtime": 1782411485.447137,
+    "ast_hash": "abdf07048214112080ca730022b9eeb2",
+    "semantic_hash": "abdf07048214112080ca730022b9eeb2"
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "communities": {
+    "0": [
+      "adr_0001_philosophy",
+      "agent_reach_service",
+      "builder_os_app",
+      "builder_os_schema",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_py",
+      "builder_os_skills_builder_advisor_skill",
+      "claude_code_cli",
+      "hermes_agent_root",
+      "hermes_runtime",
+      "pair_programmer_app",
+      "pair_programmer_skills_pair_programmer_skill",
+      "save_idea_py",
+      "shared_db_py",
+      "supabase_service",
+      "telegram_service",
+      "venture_studio_app",
+      "work_order_dispatch_pattern"
+    ],
+    "1": [
+      "venture_studio_skills_idea_validator_scripts_save_idea",
+      "venture_studio_skills_idea_validator_scripts_save_idea_get_digest_candidates",
+      "venture_studio_skills_idea_validator_scripts_save_idea_get_idea",
+      "venture_studio_skills_idea_validator_scripts_save_idea_main",
+      "venture_studio_skills_idea_validator_scripts_save_idea_rationale_1",
+      "venture_studio_skills_idea_validator_scripts_save_idea_rationale_101",
+      "venture_studio_skills_idea_validator_scripts_save_idea_rationale_117",
+      "venture_studio_skills_idea_validator_scripts_save_idea_rationale_129",
+      "venture_studio_skills_idea_validator_scripts_save_idea_rationale_135",
+      "venture_studio_skills_idea_validator_scripts_save_idea_rationale_28",
+      "venture_studio_skills_idea_validator_scripts_save_idea_rationale_50",
+      "venture_studio_skills_idea_validator_scripts_save_idea_rationale_75",
+      "venture_studio_skills_idea_validator_scripts_save_idea_save_competitor",
+      "venture_studio_skills_idea_validator_scripts_save_idea_save_idea",
+      "venture_studio_skills_idea_validator_scripts_save_idea_save_research_run",
+      "venture_studio_skills_idea_validator_scripts_save_idea_save_synthesis_report",
+      "venture_studio_skills_idea_validator_scripts_save_idea_update_idea_status"
+    ],
+    "2": [
+      "agent_reach",
+      "builder_os",
+      "claude_code_platform",
+      "claude_sonnet_model",
+      "generate_pdf_py",
+      "idea_validation_workflow",
+      "pdf_generation",
+      "red_team_py",
+      "roadmap",
+      "telegram_platform",
+      "venture_studio",
+      "venture_studio_skills_idea_validator_skill",
+      "web_search_capability",
+      "weekly_digest_process",
+      "work_order_system",
+      "write_report_py"
+    ],
+    "3": [
+      "builder_os_skills_builder_advisor_scripts_save_work_order",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_complete_work_order",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_create_work_order",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_delete_work_order",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_get_work_order",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_list_work_orders",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_main",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_now",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_rationale_1",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_rationale_114",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_rationale_43",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_rationale_65",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_rationale_83",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_rationale_90",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_update_session",
+      "builder_os_skills_builder_advisor_scripts_save_work_order_update_status"
+    ],
+    "4": [
+      "builder_os_skills_builder_advisor_scripts_save_discovery",
+      "builder_os_skills_builder_advisor_scripts_save_discovery_list_discoveries",
+      "builder_os_skills_builder_advisor_scripts_save_discovery_main",
+      "builder_os_skills_builder_advisor_scripts_save_discovery_rationale_1",
+      "builder_os_skills_builder_advisor_scripts_save_discovery_rationale_27",
+      "builder_os_skills_builder_advisor_scripts_save_discovery_rationale_44",
+      "builder_os_skills_builder_advisor_scripts_save_discovery_rationale_54",
+      "builder_os_skills_builder_advisor_scripts_save_discovery_save_discovery",
+      "builder_os_skills_builder_advisor_scripts_save_discovery_update_status",
+      "shared_db",
+      "shared_db_get_client",
+      "shared_db_rationale_1",
+      "shared_db_rationale_13"
+    ],
+    "5": [
+      "venture_studio_scripts_weekly_digest",
+      "venture_studio_scripts_weekly_digest_format_markdown",
+      "venture_studio_scripts_weekly_digest_format_telegram",
+      "venture_studio_scripts_weekly_digest_get_digest_candidates",
+      "venture_studio_scripts_weekly_digest_get_ideas_this_week",
+      "venture_studio_scripts_weekly_digest_get_total_idea_count",
+      "venture_studio_scripts_weekly_digest_main",
+      "venture_studio_scripts_weekly_digest_rationale_1",
+      "venture_studio_scripts_weekly_digest_rationale_140",
+      "venture_studio_scripts_weekly_digest_rationale_49",
+      "venture_studio_scripts_weekly_digest_rationale_77"
+    ],
+    "6": [
+      "any",
+      "venture_studio_skills_idea_validator_scripts_multi_model_research",
+      "venture_studio_skills_idea_validator_scripts_multi_model_research_call_openrouter",
+      "venture_studio_skills_idea_validator_scripts_multi_model_research_is_usable",
+      "venture_studio_skills_idea_validator_scripts_multi_model_research_main",
+      "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_1",
+      "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_310",
+      "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_415",
+      "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_427",
+      "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role"
+    ],
+    "7": [
+      "competition_role",
+      "demand_role",
+      "economics_role",
+      "external_role",
+      "feasibility_role",
+      "market_role",
+      "mece_committee",
+      "multi_model_research_py",
+      "openrouter_api"
+    ],
+    "8": [
+      "venture_studio_skills_idea_validator_scripts_generate_pdf_fallback",
+      "venture_studio_skills_idea_validator_scripts_generate_pdf_fallback_main",
+      "venture_studio_skills_idea_validator_scripts_generate_pdf_fallback_rationale_1",
+      "venture_studio_skills_idea_validator_scripts_generate_pdf_fallback_rationale_30",
+      "venture_studio_skills_idea_validator_scripts_generate_pdf_fallback_rationale_45",
+      "venture_studio_skills_idea_validator_scripts_generate_pdf_fallback_render_markdown",
+      "venture_studio_skills_idea_validator_scripts_generate_pdf_fallback_render_with_headless_edge",
+      "venture_studio_skills_idea_validator_scripts_generate_pdf_fallback_strip_duplicate_header",
+      "venture_studio_skills_idea_validator_scripts_generate_pdf_fallback_write_html"
+    ],
+    "9": [
+      "ast_extraction",
+      "graph_query_traversal",
+      "graphify_tool",
+      "incremental_update",
+      "mcp_server",
+      "post_commit_hook",
+      "semantic_extraction",
+      "video_transcription"
+    ],
+    "10": [
+      "venture_studio_skills_idea_validator_scripts_write_report",
+      "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict",
+      "venture_studio_skills_idea_validator_scripts_write_report_main",
+      "venture_studio_skills_idea_validator_scripts_write_report_rationale_1",
+      "venture_studio_skills_idea_validator_scripts_write_report_rationale_152",
+      "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
+    ],
+    "11": [
+      "venture_studio_skills_idea_validator_scripts_red_team",
+      "venture_studio_skills_idea_validator_scripts_red_team_extract_json",
+      "venture_studio_skills_idea_validator_scripts_red_team_main",
+      "venture_studio_skills_idea_validator_scripts_red_team_rationale_1",
+      "venture_studio_skills_idea_validator_scripts_red_team_rationale_88"
+    ],
+    "12": [
+      "venture_studio_skills_idea_validator_scripts_verify_research_data",
+      "venture_studio_skills_idea_validator_scripts_verify_research_data_check_raw_data",
+      "venture_studio_skills_idea_validator_scripts_verify_research_data_check_synthesis_output",
+      "venture_studio_skills_idea_validator_scripts_verify_research_data_main",
+      "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_1"
+    ],
+    "13": [
+      "venture_studio_skills_idea_validator_templates_generate_pdf",
+      "venture_studio_skills_idea_validator_templates_generate_pdf_generate_pdf",
+      "venture_studio_skills_idea_validator_templates_generate_pdf_main",
+      "venture_studio_skills_idea_validator_templates_generate_pdf_rationale_1"
+    ],
+    "14": [
+      "venture_studio_schema",
+      "venture_studio_skills_idea_validator_scripts_save_idea_py"
+    ],
+    "15": [
+      "shared_skills_graphify_skill"
+    ],
+    "16": [
+      "venture_studio_skills_idea_validator_scripts_generate_pdf_py"
+    ],
+    "17": [
+      "venture_studio_skills_idea_validator_scripts_multi_model_research_py"
+    ],
+    "18": [
+      "venture_studio_skills_idea_validator_scripts_red_team_py"
+    ],
+    "19": [
+      "venture_studio_skills_idea_validator_scripts_verify_research_data_py"
+    ],
+    "20": [
+      "venture_studio_skills_idea_validator_scripts_write_report_py"
+    ]
+  },
+  "cohesion": {
+    "0": 0.16176470588235295,
+    "1": 0.16911764705882354,
+    "2": 0.175,
+    "3": 0.20833333333333334,
+    "4": 0.20512820512820512,
+    "5": 0.2727272727272727,
+    "6": 0.3111111111111111,
+    "7": 0.2222222222222222,
+    "8": 0.3333333333333333,
+    "9": 0.25,
+    "10": 0.4666666666666667,
+    "11": 0.5,
+    "12": 0.6,
+    "13": 0.6666666666666666,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0
+  },
+  "gods": [
+    {
+      "id": "venture_studio_skills_idea_validator_skill",
+      "label": "Idea Validator Skill",
+      "degree": 12
+    },
+    {
+      "id": "builder_os_skills_builder_advisor_scripts_save_work_order_main",
+      "label": "main()",
+      "degree": 8
+    },
+    {
+      "id": "venture_studio_skills_idea_validator_scripts_save_idea_main",
+      "label": "main()",
+      "degree": 8
+    },
+    {
+      "id": "hermes_agent_root",
+      "label": "Hermes Agent Personal OS",
+      "degree": 8
+    },
+    {
+      "id": "mece_committee",
+      "label": "MECE Research Committee",
+      "degree": 8
+    },
+    {
+      "id": "graphify_tool",
+      "label": "Graphify Knowledge Graph Tool",
+      "degree": 7
+    },
+    {
+      "id": "shared_db_get_client",
+      "label": "get_client()",
+      "degree": 6
+    },
+    {
+      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role",
+      "label": "run_role()",
+      "degree": 6
+    },
+    {
+      "id": "supabase_service",
+      "label": "Supabase Persistence Layer",
+      "degree": 6
+    },
+    {
+      "id": "venture_studio",
+      "label": "Venture Studio Application",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "ADR 0001: Personal AI OS Philosophy",
+      "target": "Shared Supabase Client Factory",
+      "source_files": [
+        "docs/adr/0001-personal-ai-os-philosophy.md",
+        "shared/db.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "rationale_for",
+      "why": "crosses file types (code \u2194 doc); connects across different repos/directories"
+    },
+    {
+      "source": "Hermes Agent Personal OS",
+      "target": "Pair Programmer Application",
+      "source_files": [
+        "README.md",
+        "pair-programmer/README.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Pair Programmer Application` unexpectedly reaches hub `Hermes Agent Personal OS`"
+    },
+    {
+      "source": "Pair Programmer Skill",
+      "target": "Hermes Agent Personal OS",
+      "source_files": [
+        "pair-programmer/skills/pair-programmer/SKILL.md",
+        "README.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Pair Programmer Skill` unexpectedly reaches hub `Hermes Agent Personal OS`"
+    },
+    {
+      "source": "save_idea.py Script",
+      "target": "Supabase Persistence Layer",
+      "source_files": [
+        "venture-studio/skills/idea-validator/SKILL.md",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `save_idea.py Script` unexpectedly reaches hub `Supabase Persistence Layer`"
+    },
+    {
+      "source": "Venture Studio Application",
+      "target": "Supabase Persistence Layer",
+      "source_files": [
+        "venture-studio/.hermes/CONTEXT.md",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 51556,
+    "output": 9715
+  }
+}
