@@ -22,14 +22,194 @@
   },
   "nodes": [
     {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "builder-os/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "builder_os_readme",
+      "community": 12,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "builder-os",
+      "file_type": "document",
+      "source_file": "builder-os/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "builder_os_readme_builder_os",
+      "community": 12,
+      "norm_label": "builder-os"
+    },
+    {
+      "label": "Setup",
+      "file_type": "document",
+      "source_file": "builder-os/README.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "builder_os_readme_setup",
+      "community": 12,
+      "norm_label": "setup"
+    },
+    {
+      "label": "Usage",
+      "file_type": "document",
+      "source_file": "builder-os/README.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "builder_os_readme_usage",
+      "community": 12,
+      "norm_label": "usage"
+    },
+    {
+      "label": "Provider auth watchdog",
+      "file_type": "document",
+      "source_file": "builder-os/README.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "builder_os_readme_provider_auth_watchdog",
+      "community": 12,
+      "norm_label": "provider auth watchdog"
+    },
+    {
+      "label": "Structure",
+      "file_type": "document",
+      "source_file": "builder-os/README.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "builder_os_readme_structure",
+      "community": 12,
+      "norm_label": "structure"
+    },
+    {
+      "label": "check_provider_auth.py",
+      "file_type": "code",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "builder_os_scripts_check_provider_auth",
+      "community": 2,
+      "norm_label": "check_provider_auth.py"
+    },
+    {
+      "label": "_read_env_var()",
+      "file_type": "code",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "builder_os_scripts_check_provider_auth_read_env_var",
+      "community": 2,
+      "norm_label": "_read_env_var()"
+    },
+    {
+      "label": "_configured_providers()",
+      "file_type": "code",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "builder_os_scripts_check_provider_auth_configured_providers",
+      "community": 2,
+      "norm_label": "_configured_providers()"
+    },
+    {
+      "label": "_auth_status()",
+      "file_type": "code",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "builder_os_scripts_check_provider_auth_auth_status",
+      "community": 2,
+      "norm_label": "_auth_status()"
+    },
+    {
+      "label": "_load_state()",
+      "file_type": "code",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L104",
+      "_origin": "ast",
+      "id": "builder_os_scripts_check_provider_auth_load_state",
+      "community": 2,
+      "norm_label": "_load_state()"
+    },
+    {
+      "label": "_save_state()",
+      "file_type": "code",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "builder_os_scripts_check_provider_auth_save_state",
+      "community": 2,
+      "norm_label": "_save_state()"
+    },
+    {
+      "label": "_scan_log_for_new_auth_failures()",
+      "file_type": "code",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "builder_os_scripts_check_provider_auth_scan_log_for_new_auth_failures",
+      "community": 2,
+      "norm_label": "_scan_log_for_new_auth_failures()"
+    },
+    {
+      "label": "_send_telegram()",
+      "file_type": "code",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L140",
+      "_origin": "ast",
+      "id": "builder_os_scripts_check_provider_auth_send_telegram",
+      "community": 2,
+      "norm_label": "_send_telegram()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L164",
+      "_origin": "ast",
+      "id": "builder_os_scripts_check_provider_auth_main",
+      "community": 2,
+      "norm_label": "main()"
+    },
+    {
+      "label": "check_provider_auth.py \u2014 Standalone watchdog for Hermes's model-provider auth  N",
+      "file_type": "rationale",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "builder_os_scripts_check_provider_auth_rationale_1",
+      "community": 2,
+      "norm_label": "check_provider_auth.py \u2014 standalone watchdog for hermes's model-provider auth  n"
+    },
+    {
+      "label": "Returns {\"provider\": ..., \"logged_in\": bool, \"detail\": str}.",
+      "file_type": "rationale",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "builder_os_scripts_check_provider_auth_rationale_91",
+      "community": 2,
+      "norm_label": "returns {\"provider\": ..., \"logged_in\": bool, \"detail\": str}."
+    },
+    {
+      "label": "Read only the bytes appended since the last run (cheap, no full-file     rescan)",
+      "file_type": "rationale",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "builder_os_scripts_check_provider_auth_rationale_122",
+      "community": 2,
+      "norm_label": "read only the bytes appended since the last run (cheap, no full-file     rescan)"
+    },
+    {
       "label": "SKILL.md",
       "file_type": "document",
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill",
       "community": 0,
-      "norm_label": "skill.md"
+      "norm_label": "skill.md",
+      "id": "venture_studio_skills_idea_validator_skill"
     },
     {
       "label": "Idea Validator",
@@ -37,9 +217,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L21",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_idea_validator",
       "community": 0,
-      "norm_label": "idea validator"
+      "norm_label": "idea validator",
+      "id": "venture_studio_skills_idea_validator_skill_idea_validator"
     },
     {
       "label": "When to Use",
@@ -47,9 +227,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L23",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_when_to_use",
       "community": 0,
-      "norm_label": "when to use"
+      "norm_label": "when to use",
+      "id": "venture_studio_skills_idea_validator_skill_when_to_use"
     },
     {
       "label": "Procedure",
@@ -57,9 +237,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L38",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_procedure",
       "community": 28,
-      "norm_label": "procedure"
+      "norm_label": "procedure",
+      "id": "venture_studio_skills_idea_validator_skill_procedure"
     },
     {
       "label": "Step 0 \u2014 Parse the idea",
@@ -67,9 +247,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L48",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_0_parse_the_idea",
       "community": 28,
-      "norm_label": "step 0 \u2014 parse the idea"
+      "norm_label": "step 0 \u2014 parse the idea",
+      "id": "venture_studio_skills_idea_validator_skill_step_0_parse_the_idea"
     },
     {
       "label": "Step 1 \u2014 Persist the raw idea to Supabase",
@@ -77,9 +257,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L61",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_1_persist_the_raw_idea_to_supabase",
       "community": 28,
-      "norm_label": "step 1 \u2014 persist the raw idea to supabase"
+      "norm_label": "step 1 \u2014 persist the raw idea to supabase",
+      "id": "venture_studio_skills_idea_validator_skill_step_1_persist_the_raw_idea_to_supabase"
     },
     {
       "label": "Step 2 \u2014 MECE research committee (shared corpus \u2192 6 specialists \u2192 red team)",
@@ -87,9 +267,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L76",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team",
       "community": 28,
-      "norm_label": "step 2 \u2014 mece research committee (shared corpus \u2192 6 specialists \u2192 red team)"
+      "norm_label": "step 2 \u2014 mece research committee (shared corpus \u2192 6 specialists \u2192 red team)",
+      "id": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team"
     },
     {
       "label": "Step 2a \u2014 Build the shared evidence corpus (once per idea)",
@@ -97,9 +277,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L95",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_2a_build_the_shared_evidence_corpus_once_per_idea",
       "community": 28,
-      "norm_label": "step 2a \u2014 build the shared evidence corpus (once per idea)"
+      "norm_label": "step 2a \u2014 build the shared evidence corpus (once per idea)",
+      "id": "venture_studio_skills_idea_validator_skill_step_2a_build_the_shared_evidence_corpus_once_per_idea"
     },
     {
       "label": "Step 2b \u2014 Run the six specialist roles (sequentially, one at a time)",
@@ -107,9 +287,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L137",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_2b_run_the_six_specialist_roles_sequentially_one_at_a_time",
       "community": 28,
-      "norm_label": "step 2b \u2014 run the six specialist roles (sequentially, one at a time)"
+      "norm_label": "step 2b \u2014 run the six specialist roles (sequentially, one at a time)",
+      "id": "venture_studio_skills_idea_validator_skill_step_2b_run_the_six_specialist_roles_sequentially_one_at_a_time"
     },
     {
       "label": "Step 2c \u2014 Red team (mandatory, only after ALL roles are gated)",
@@ -117,9 +297,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L155",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_2c_red_team_mandatory_only_after_all_roles_are_gated",
       "community": 28,
-      "norm_label": "step 2c \u2014 red team (mandatory, only after all roles are gated)"
+      "norm_label": "step 2c \u2014 red team (mandatory, only after all roles are gated)",
+      "id": "venture_studio_skills_idea_validator_skill_step_2c_red_team_mandatory_only_after_all_roles_are_gated"
     },
     {
       "label": "Step 2d \u2014 Gap closure (EXACTLY one iteration, then stop)",
@@ -127,9 +307,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L169",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_2d_gap_closure_exactly_one_iteration_then_stop",
       "community": 28,
-      "norm_label": "step 2d \u2014 gap closure (exactly one iteration, then stop)"
+      "norm_label": "step 2d \u2014 gap closure (exactly one iteration, then stop)",
+      "id": "venture_studio_skills_idea_validator_skill_step_2d_gap_closure_exactly_one_iteration_then_stop"
     },
     {
       "label": "Step 3 \u2014 Synthesize the report",
@@ -137,9 +317,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L183",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_3_synthesize_the_report",
       "community": 28,
-      "norm_label": "step 3 \u2014 synthesize the report"
+      "norm_label": "step 3 \u2014 synthesize the report",
+      "id": "venture_studio_skills_idea_validator_skill_step_3_synthesize_the_report"
     },
     {
       "label": "Step 4 \u2014 Generate PDF report",
@@ -147,9 +327,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L265",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_4_generate_pdf_report",
       "community": 28,
-      "norm_label": "step 4 \u2014 generate pdf report"
+      "norm_label": "step 4 \u2014 generate pdf report",
+      "id": "venture_studio_skills_idea_validator_skill_step_4_generate_pdf_report"
     },
     {
       "label": "Step 5 \u2014 Save the research run to Supabase",
@@ -157,9 +337,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L282",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_5_save_the_research_run_to_supabase",
       "community": 28,
-      "norm_label": "step 5 \u2014 save the research run to supabase"
+      "norm_label": "step 5 \u2014 save the research run to supabase",
+      "id": "venture_studio_skills_idea_validator_skill_step_5_save_the_research_run_to_supabase"
     },
     {
       "label": "Step 6 \u2014 Save synthesis, competitors, and idea status to Supabase",
@@ -167,9 +347,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L298",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_6_save_synthesis_competitors_and_idea_status_to_supabase",
       "community": 28,
-      "norm_label": "step 6 \u2014 save synthesis, competitors, and idea status to supabase"
+      "norm_label": "step 6 \u2014 save synthesis, competitors, and idea status to supabase",
+      "id": "venture_studio_skills_idea_validator_skill_step_6_save_synthesis_competitors_and_idea_status_to_supabase"
     },
     {
       "label": "Step 7 \u2014 Send Telegram TL;DR + PDF",
@@ -177,9 +357,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L331",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_7_send_telegram_tl_dr_pdf",
       "community": 28,
-      "norm_label": "step 7 \u2014 send telegram tl;dr + pdf"
+      "norm_label": "step 7 \u2014 send telegram tl;dr + pdf",
+      "id": "venture_studio_skills_idea_validator_skill_step_7_send_telegram_tl_dr_pdf"
     },
     {
       "label": "Step 8 \u2014 Post-verdict watchlist (verdicts must stay falsifiable)",
@@ -187,9 +367,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L368",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_8_post_verdict_watchlist_verdicts_must_stay_falsifiable",
       "community": 28,
-      "norm_label": "step 8 \u2014 post-verdict watchlist (verdicts must stay falsifiable)"
+      "norm_label": "step 8 \u2014 post-verdict watchlist (verdicts must stay falsifiable)",
+      "id": "venture_studio_skills_idea_validator_skill_step_8_post_verdict_watchlist_verdicts_must_stay_falsifiable"
     },
     {
       "label": "Pitfalls",
@@ -197,9 +377,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L383",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_pitfalls",
       "community": 0,
-      "norm_label": "pitfalls"
+      "norm_label": "pitfalls",
+      "id": "venture_studio_skills_idea_validator_skill_pitfalls"
     },
     {
       "label": "Verification",
@@ -207,9 +387,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L405",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_verification",
       "community": 0,
-      "norm_label": "verification"
+      "norm_label": "verification",
+      "id": "venture_studio_skills_idea_validator_skill_verification"
     },
     {
       "label": "multi_model_research.py",
@@ -217,9 +397,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research",
       "community": 6,
-      "norm_label": "multi_model_research.py"
+      "norm_label": "multi_model_research.py",
+      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research"
     },
     {
       "label": "call_openrouter()",
@@ -227,9 +407,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L312",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_call_openrouter",
       "community": 6,
-      "norm_label": "call_openrouter()"
+      "norm_label": "call_openrouter()",
+      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_call_openrouter"
     },
     {
       "label": "Any",
@@ -237,9 +417,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "any",
       "community": 6,
-      "norm_label": "any"
+      "norm_label": "any",
+      "id": "any"
     },
     {
       "label": "_is_usable()",
@@ -247,9 +427,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L422",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_is_usable",
       "community": 6,
-      "norm_label": "_is_usable()"
+      "norm_label": "_is_usable()",
+      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_is_usable"
     },
     {
       "label": "run_role()",
@@ -257,9 +437,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L430",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role",
       "community": 6,
-      "norm_label": "run_role()"
+      "norm_label": "run_role()",
+      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role"
     },
     {
       "label": "main()",
@@ -267,9 +447,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L454",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_main",
       "community": 6,
-      "norm_label": "main()"
+      "norm_label": "main()",
+      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_main"
     },
     {
       "label": "multi_model_research.py \u2014 MECE specialist ensemble for decision research  Archit",
@@ -277,9 +457,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_1",
       "community": 6,
-      "norm_label": "multi_model_research.py \u2014 mece specialist ensemble for decision research  archit"
+      "norm_label": "multi_model_research.py \u2014 mece specialist ensemble for decision research  archit",
+      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_1"
     },
     {
       "label": "Call a single model via OpenRouter, with 429 retry and truncation detection.",
@@ -287,9 +467,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L318",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_318",
       "community": 6,
-      "norm_label": "call a single model via openrouter, with 429 retry and truncation detection."
+      "norm_label": "call a single model via openrouter, with 429 retry and truncation detection.",
+      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_318"
     },
     {
       "label": "A response is usable only if the model answered AND its JSON parsed.",
@@ -297,9 +477,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L423",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_423",
       "community": 6,
-      "norm_label": "a response is usable only if the model answered and its json parsed."
+      "norm_label": "a response is usable only if the model answered and its json parsed.",
+      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_423"
     },
     {
       "label": "Run one specialist role: try each model in order until one returns     parseable",
@@ -307,9 +487,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L435",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_435",
       "community": 6,
-      "norm_label": "run one specialist role: try each model in order until one returns     parseable"
+      "norm_label": "run one specialist role: try each model in order until one returns     parseable",
+      "id": "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_435"
     },
     {
       "label": "red_team.py",
@@ -317,9 +497,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/red_team.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_red_team",
       "community": 11,
-      "norm_label": "red_team.py"
+      "norm_label": "red_team.py",
+      "id": "venture_studio_skills_idea_validator_scripts_red_team"
     },
     {
       "label": "extract_json()",
@@ -327,9 +507,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/red_team.py",
       "source_location": "L89",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_red_team_extract_json",
       "community": 11,
-      "norm_label": "extract_json()"
+      "norm_label": "extract_json()",
+      "id": "venture_studio_skills_idea_validator_scripts_red_team_extract_json"
     },
     {
       "label": "main()",
@@ -337,9 +517,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/red_team.py",
       "source_location": "L105",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_red_team_main",
       "community": 11,
-      "norm_label": "main()"
+      "norm_label": "main()",
+      "id": "venture_studio_skills_idea_validator_scripts_red_team_main"
     },
     {
       "label": "red_team.py \u2014 Sequential adversarial review over the specialist role outputs  Th",
@@ -347,9 +527,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/red_team.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_red_team_rationale_1",
       "community": 11,
-      "norm_label": "red_team.py \u2014 sequential adversarial review over the specialist role outputs  th"
+      "norm_label": "red_team.py \u2014 sequential adversarial review over the specialist role outputs  th",
+      "id": "venture_studio_skills_idea_validator_scripts_red_team_rationale_1"
     },
     {
       "label": "Extract the first JSON object from possibly-noisy CLI output.",
@@ -357,9 +537,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/red_team.py",
       "source_location": "L90",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_red_team_rationale_90",
       "community": 11,
-      "norm_label": "extract the first json object from possibly-noisy cli output."
+      "norm_label": "extract the first json object from possibly-noisy cli output.",
+      "id": "venture_studio_skills_idea_validator_scripts_red_team_rationale_90"
     },
     {
       "label": "verify_research_data.py",
@@ -367,9 +547,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data",
       "community": 10,
-      "norm_label": "verify_research_data.py"
+      "norm_label": "verify_research_data.py",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data"
     },
     {
       "label": "check_raw_data()",
@@ -377,9 +557,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L67",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_raw_data",
       "community": 10,
-      "norm_label": "check_raw_data()"
+      "norm_label": "check_raw_data()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_raw_data"
     },
     {
       "label": "check_synthesis_output()",
@@ -387,9 +567,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L104",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_synthesis_output",
       "community": 10,
-      "norm_label": "check_synthesis_output()"
+      "norm_label": "check_synthesis_output()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_synthesis_output"
     },
     {
       "label": "_find_quotes()",
@@ -397,9 +577,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L186",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_find_quotes",
       "community": 10,
-      "norm_label": "_find_quotes()"
+      "norm_label": "_find_quotes()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_find_quotes"
     },
     {
       "label": "_normalize()",
@@ -407,9 +587,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L192",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize",
       "community": 10,
-      "norm_label": "_normalize()"
+      "norm_label": "_normalize()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize"
     },
     {
       "label": "_shingle_grounded()",
@@ -417,9 +597,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L197",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_shingle_grounded",
       "community": 10,
-      "norm_label": "_shingle_grounded()"
+      "norm_label": "_shingle_grounded()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_shingle_grounded"
     },
     {
       "label": "_walk_strings()",
@@ -427,9 +607,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L215",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_walk_strings",
       "community": 10,
-      "norm_label": "_walk_strings()"
+      "norm_label": "_walk_strings()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_walk_strings"
     },
     {
       "label": "_extract_quotes_from_json()",
@@ -437,9 +617,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L227",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_extract_quotes_from_json",
       "community": 10,
-      "norm_label": "_extract_quotes_from_json()"
+      "norm_label": "_extract_quotes_from_json()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_extract_quotes_from_json"
     },
     {
       "label": "_read()",
@@ -447,9 +627,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L240",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_read",
       "community": 10,
-      "norm_label": "_read()"
+      "norm_label": "_read()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_read"
     },
     {
       "label": "check_quote_grounding()",
@@ -457,9 +637,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L245",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_quote_grounding",
       "community": 10,
-      "norm_label": "check_quote_grounding()"
+      "norm_label": "check_quote_grounding()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_quote_grounding"
     },
     {
       "label": "check_report_quotes()",
@@ -467,9 +647,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L282",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_report_quotes",
       "community": 10,
-      "norm_label": "check_report_quotes()"
+      "norm_label": "check_report_quotes()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_report_quotes"
     },
     {
       "label": "check_entity_grounding()",
@@ -477,9 +657,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L306",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_entity_grounding",
       "community": 10,
-      "norm_label": "check_entity_grounding()"
+      "norm_label": "check_entity_grounding()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_entity_grounding"
     },
     {
       "label": "check_finding_coverage()",
@@ -487,9 +667,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L361",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_finding_coverage",
       "community": 10,
-      "norm_label": "check_finding_coverage()"
+      "norm_label": "check_finding_coverage()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_finding_coverage"
     },
     {
       "label": "main()",
@@ -497,9 +677,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L407",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_main",
       "community": 10,
-      "norm_label": "main()"
+      "norm_label": "main()",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_main"
     },
     {
       "label": "verify_research_data.py \u2014 Mechanical integrity gate for idea-validator's researc",
@@ -507,9 +687,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_1",
       "community": 10,
-      "norm_label": "verify_research_data.py \u2014 mechanical integrity gate for idea-validator's researc"
+      "norm_label": "verify_research_data.py \u2014 mechanical integrity gate for idea-validator's researc",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_1"
     },
     {
       "label": "Lowercase, strip non-alphanumerics to spaces, collapse whitespace.",
@@ -517,9 +697,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L193",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_193",
       "community": 10,
-      "norm_label": "lowercase, strip non-alphanumerics to spaces, collapse whitespace."
+      "norm_label": "lowercase, strip non-alphanumerics to spaces, collapse whitespace.",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_193"
     },
     {
       "label": "A quote is grounded if any SHINGLE_TOKENS-token run of it appears     verbatim",
@@ -527,9 +707,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L198",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_198",
       "community": 10,
-      "norm_label": "a quote is grounded if any shingle_tokens-token run of it appears     verbatim"
+      "norm_label": "a quote is grounded if any shingle_tokens-token run of it appears     verbatim",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_198"
     },
     {
       "label": "Yield (json_path, string_value) for every string in a JSON structure.",
@@ -537,9 +717,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L216",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_216",
       "community": 10,
-      "norm_label": "yield (json_path, string_value) for every string in a json structure."
+      "norm_label": "yield (json_path, string_value) for every string in a json structure.",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_216"
     },
     {
       "label": "Collect (path, quote_text) pairs: whole values of *quote*-named fields,     plu",
@@ -547,9 +727,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L228",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_228",
       "community": 10,
-      "norm_label": "collect (path, quote_text) pairs: whole values of *quote*-named fields,     plu"
+      "norm_label": "collect (path, quote_text) pairs: whole values of *quote*-named fields,     plu",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_228"
     },
     {
       "label": "Per-section topical check. Conservative by design: individual dead     sections",
@@ -557,9 +737,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L307",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_307",
       "community": 10,
-      "norm_label": "per-section topical check. conservative by design: individual dead     sections"
+      "norm_label": "per-section topical check. conservative by design: individual dead     sections",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_307"
     },
     {
       "label": "Every fatal/high hidden assumption and every top kill reason from the     red t",
@@ -567,9 +747,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L362",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_362",
       "community": 10,
-      "norm_label": "every fatal/high hidden assumption and every top kill reason from the     red t"
+      "norm_label": "every fatal/high hidden assumption and every top kill reason from the     red t",
+      "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_362"
     },
     {
       "label": "write_report.py",
@@ -577,9 +757,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report",
       "community": 10,
-      "norm_label": "write_report.py"
+      "norm_label": "write_report.py",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report"
     },
     {
       "label": "strip_outer_fence()",
@@ -587,9 +767,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L164",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence",
       "community": 10,
-      "norm_label": "strip_outer_fence()"
+      "norm_label": "strip_outer_fence()",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
     },
     {
       "label": "extract_verdict()",
@@ -597,9 +777,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L174",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict",
       "community": 10,
-      "norm_label": "extract_verdict()"
+      "norm_label": "extract_verdict()",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict"
     },
     {
       "label": "main()",
@@ -607,9 +787,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L182",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_main",
       "community": 10,
-      "norm_label": "main()"
+      "norm_label": "main()",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_main"
     },
     {
       "label": "write_report.py \u2014 Final report synthesis by Claude on the local subscription  Th",
@@ -617,9 +797,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_rationale_1",
       "community": 10,
-      "norm_label": "write_report.py \u2014 final report synthesis by claude on the local subscription  th"
+      "norm_label": "write_report.py \u2014 final report synthesis by claude on the local subscription  th",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_rationale_1"
     },
     {
       "label": "Remove one whole-document ```-fence if the model ignored instructions.",
@@ -627,9 +807,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L165",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_rationale_165",
       "community": 10,
-      "norm_label": "remove one whole-document ```-fence if the model ignored instructions."
+      "norm_label": "remove one whole-document ```-fence if the model ignored instructions.",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_rationale_165"
     },
     {
       "label": "CLAUDE.md",
@@ -2162,20 +2342,6 @@
       "id": "telegram_service"
     },
     {
-      "label": "Builder OS Application",
-      "file_type": "document",
-      "source_file": "builder-os/README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "builder os application",
-      "community_name": "Hermes Agent Personal OS",
-      "id": "builder_os_app"
-    },
-    {
       "label": "Builder Advisor Skill",
       "file_type": "document",
       "source_file": "builder-os/skills/builder-advisor/SKILL.md",
@@ -2212,7 +2378,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 15,
       "norm_label": "claude code cli for work order dispatch",
       "community_name": "Hermes Agent Personal OS",
       "id": "claude_code_cli"
@@ -2374,6 +2540,243 @@
   ],
   "links": [
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "builder_os_readme",
+      "target": "builder_os_readme_builder_os",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/README.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "builder_os_readme_builder_os",
+      "target": "builder_os_readme_provider_auth_watchdog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "builder_os_readme_builder_os",
+      "target": "builder_os_readme_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/README.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "builder_os_readme_builder_os",
+      "target": "builder_os_readme_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/README.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "builder_os_readme_builder_os",
+      "target": "builder_os_readme_usage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth",
+      "target": "builder_os_scripts_check_provider_auth_auth_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth",
+      "target": "builder_os_scripts_check_provider_auth_configured_providers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth",
+      "target": "builder_os_scripts_check_provider_auth_load_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth",
+      "target": "builder_os_scripts_check_provider_auth_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth",
+      "target": "builder_os_scripts_check_provider_auth_read_env_var",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth",
+      "target": "builder_os_scripts_check_provider_auth_save_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth",
+      "target": "builder_os_scripts_check_provider_auth_scan_log_for_new_auth_failures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth",
+      "target": "builder_os_scripts_check_provider_auth_send_telegram",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth_rationale_1",
+      "target": "builder_os_scripts_check_provider_auth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth_send_telegram",
+      "target": "builder_os_scripts_check_provider_auth_read_env_var",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L181",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth_main",
+      "target": "builder_os_scripts_check_provider_auth_configured_providers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L182",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth_main",
+      "target": "builder_os_scripts_check_provider_auth_auth_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth_rationale_91",
+      "target": "builder_os_scripts_check_provider_auth_auth_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth_main",
+      "target": "builder_os_scripts_check_provider_auth_load_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L225",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth_main",
+      "target": "builder_os_scripts_check_provider_auth_save_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth_main",
+      "target": "builder_os_scripts_check_provider_auth_scan_log_for_new_auth_failures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth_rationale_122",
+      "target": "builder_os_scripts_check_provider_auth_scan_log_for_new_auth_failures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "builder-os/scripts/check_provider_auth.py",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "builder_os_scripts_check_provider_auth_main",
+      "target": "builder_os_scripts_check_provider_auth_send_telegram",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -2399,9 +2802,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill",
-      "target": "venture_studio_skills_idea_validator_skill_idea_validator",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_idea_validator"
     },
     {
       "relation": "contains",
@@ -2409,9 +2812,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L383",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_idea_validator",
-      "target": "venture_studio_skills_idea_validator_skill_pitfalls",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_pitfalls"
     },
     {
       "relation": "contains",
@@ -2419,9 +2822,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_idea_validator",
-      "target": "venture_studio_skills_idea_validator_skill_procedure",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_procedure"
     },
     {
       "relation": "contains",
@@ -2429,9 +2832,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L405",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_idea_validator",
-      "target": "venture_studio_skills_idea_validator_skill_verification",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_verification"
     },
     {
       "relation": "contains",
@@ -2439,9 +2842,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_idea_validator",
-      "target": "venture_studio_skills_idea_validator_skill_when_to_use",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_when_to_use"
     },
     {
       "relation": "contains",
@@ -2449,9 +2852,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_0_parse_the_idea",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_0_parse_the_idea"
     },
     {
       "relation": "contains",
@@ -2459,9 +2862,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_1_persist_the_raw_idea_to_supabase",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_1_persist_the_raw_idea_to_supabase"
     },
     {
       "relation": "contains",
@@ -2469,9 +2872,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team"
     },
     {
       "relation": "contains",
@@ -2479,9 +2882,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L183",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_3_synthesize_the_report",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_3_synthesize_the_report"
     },
     {
       "relation": "contains",
@@ -2489,9 +2892,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L265",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_4_generate_pdf_report",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_4_generate_pdf_report"
     },
     {
       "relation": "contains",
@@ -2499,9 +2902,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L282",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_5_save_the_research_run_to_supabase",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_5_save_the_research_run_to_supabase"
     },
     {
       "relation": "contains",
@@ -2509,9 +2912,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L298",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_6_save_synthesis_competitors_and_idea_status_to_supabase",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_6_save_synthesis_competitors_and_idea_status_to_supabase"
     },
     {
       "relation": "contains",
@@ -2519,9 +2922,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L331",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_7_send_telegram_tl_dr_pdf",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_7_send_telegram_tl_dr_pdf"
     },
     {
       "relation": "contains",
@@ -2529,9 +2932,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L368",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_8_post_verdict_watchlist_verdicts_must_stay_falsifiable",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_8_post_verdict_watchlist_verdicts_must_stay_falsifiable"
     },
     {
       "relation": "contains",
@@ -2539,9 +2942,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team",
-      "target": "venture_studio_skills_idea_validator_skill_step_2a_build_the_shared_evidence_corpus_once_per_idea",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_2a_build_the_shared_evidence_corpus_once_per_idea"
     },
     {
       "relation": "contains",
@@ -2549,9 +2952,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team",
-      "target": "venture_studio_skills_idea_validator_skill_step_2b_run_the_six_specialist_roles_sequentially_one_at_a_time",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_2b_run_the_six_specialist_roles_sequentially_one_at_a_time"
     },
     {
       "relation": "contains",
@@ -2559,9 +2962,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L155",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team",
-      "target": "venture_studio_skills_idea_validator_skill_step_2c_red_team_mandatory_only_after_all_roles_are_gated",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_2c_red_team_mandatory_only_after_all_roles_are_gated"
     },
     {
       "relation": "contains",
@@ -2569,9 +2972,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team",
-      "target": "venture_studio_skills_idea_validator_skill_step_2d_gap_closure_exactly_one_iteration_then_stop",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_2d_gap_closure_exactly_one_iteration_then_stop"
     },
     {
       "relation": "contains",
@@ -2579,9 +2982,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L312",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research",
-      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_call_openrouter",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_call_openrouter"
     },
     {
       "relation": "contains",
@@ -2589,9 +2992,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L422",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research",
-      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_is_usable",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_is_usable"
     },
     {
       "relation": "contains",
@@ -2599,9 +3002,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L454",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research",
-      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_main",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_main"
     },
     {
       "relation": "contains",
@@ -2609,9 +3012,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L430",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research",
-      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role"
     },
     {
       "relation": "rationale_for",
@@ -2619,9 +3022,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_1",
-      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research"
     },
     {
       "relation": "references",
@@ -2630,9 +3033,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L312",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research_call_openrouter",
-      "target": "any",
-      "confidence_score": 1.0
+      "target": "any"
     },
     {
       "relation": "rationale_for",
@@ -2640,9 +3043,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L318",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_318",
-      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_call_openrouter",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_call_openrouter"
     },
     {
       "relation": "calls",
@@ -2651,9 +3054,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L442",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role",
-      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_call_openrouter",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_call_openrouter"
     },
     {
       "relation": "references",
@@ -2662,9 +3065,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L422",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research_is_usable",
-      "target": "any",
-      "confidence_score": 1.0
+      "target": "any"
     },
     {
       "relation": "references",
@@ -2673,9 +3076,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L430",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role",
-      "target": "any",
-      "confidence_score": 1.0
+      "target": "any"
     },
     {
       "relation": "rationale_for",
@@ -2683,9 +3086,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L423",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_423",
-      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_is_usable",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_is_usable"
     },
     {
       "relation": "calls",
@@ -2694,9 +3097,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L443",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role",
-      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_is_usable",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_is_usable"
     },
     {
       "relation": "calls",
@@ -2705,9 +3108,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L486",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research_main",
-      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role"
     },
     {
       "relation": "rationale_for",
@@ -2715,9 +3118,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/multi_model_research.py",
       "source_location": "L435",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_multi_model_research_rationale_435",
-      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_multi_model_research_run_role"
     },
     {
       "relation": "contains",
@@ -2725,9 +3128,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/red_team.py",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_red_team",
-      "target": "venture_studio_skills_idea_validator_scripts_red_team_extract_json",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_red_team_extract_json"
     },
     {
       "relation": "contains",
@@ -2735,9 +3138,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/red_team.py",
       "source_location": "L105",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_red_team",
-      "target": "venture_studio_skills_idea_validator_scripts_red_team_main",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_red_team_main"
     },
     {
       "relation": "rationale_for",
@@ -2745,9 +3148,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/red_team.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_red_team_rationale_1",
-      "target": "venture_studio_skills_idea_validator_scripts_red_team",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_red_team"
     },
     {
       "relation": "calls",
@@ -2756,9 +3159,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/red_team.py",
       "source_location": "L181",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_red_team_main",
-      "target": "venture_studio_skills_idea_validator_scripts_red_team_extract_json",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_red_team_extract_json"
     },
     {
       "relation": "rationale_for",
@@ -2766,9 +3169,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/red_team.py",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_red_team_rationale_90",
-      "target": "venture_studio_skills_idea_validator_scripts_red_team_extract_json",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_red_team_extract_json"
     },
     {
       "relation": "contains",
@@ -2776,9 +3179,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L306",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_entity_grounding",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_entity_grounding"
     },
     {
       "relation": "contains",
@@ -2786,9 +3189,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L361",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_finding_coverage",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_finding_coverage"
     },
     {
       "relation": "contains",
@@ -2796,9 +3199,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L245",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_quote_grounding",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_quote_grounding"
     },
     {
       "relation": "contains",
@@ -2806,9 +3209,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_raw_data",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_raw_data"
     },
     {
       "relation": "contains",
@@ -2816,9 +3219,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L282",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_report_quotes",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_report_quotes"
     },
     {
       "relation": "contains",
@@ -2826,9 +3229,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_synthesis_output",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_synthesis_output"
     },
     {
       "relation": "contains",
@@ -2836,9 +3239,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L227",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_extract_quotes_from_json",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_extract_quotes_from_json"
     },
     {
       "relation": "contains",
@@ -2846,9 +3249,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L186",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_find_quotes",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_find_quotes"
     },
     {
       "relation": "contains",
@@ -2856,9 +3259,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L407",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_main",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_main"
     },
     {
       "relation": "contains",
@@ -2866,9 +3269,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L192",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize"
     },
     {
       "relation": "contains",
@@ -2876,9 +3279,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L240",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_read",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_read"
     },
     {
       "relation": "contains",
@@ -2886,9 +3289,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L197",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_shingle_grounded",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_shingle_grounded"
     },
     {
       "relation": "contains",
@@ -2896,9 +3299,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L215",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_walk_strings",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_walk_strings"
     },
     {
       "relation": "rationale_for",
@@ -2906,9 +3309,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_1",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data"
     },
     {
       "relation": "imports_from",
@@ -2917,9 +3320,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data"
     },
     {
       "relation": "calls",
@@ -2928,9 +3331,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L441",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_main",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_raw_data",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_raw_data"
     },
     {
       "relation": "calls",
@@ -2939,9 +3342,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L453",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_main",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_synthesis_output",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_synthesis_output"
     },
     {
       "relation": "calls",
@@ -2950,9 +3353,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L235",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_extract_quotes_from_json",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_find_quotes",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_find_quotes"
     },
     {
       "relation": "calls",
@@ -2961,9 +3364,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L310",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_entity_grounding",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize"
     },
     {
       "relation": "calls",
@@ -2972,9 +3375,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L370",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_finding_coverage",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize"
     },
     {
       "relation": "calls",
@@ -2983,9 +3386,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L251",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_quote_grounding",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize"
     },
     {
       "relation": "calls",
@@ -2994,9 +3397,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L283",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_report_quotes",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize"
     },
     {
       "relation": "rationale_for",
@@ -3004,9 +3407,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L193",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_193",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize"
     },
     {
       "relation": "calls",
@@ -3015,9 +3418,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L202",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_shingle_grounded",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_normalize"
     },
     {
       "relation": "calls",
@@ -3026,9 +3429,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L255",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_quote_grounding",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_shingle_grounded",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_shingle_grounded"
     },
     {
       "relation": "calls",
@@ -3037,9 +3440,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L290",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_report_quotes",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_shingle_grounded",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_shingle_grounded"
     },
     {
       "relation": "rationale_for",
@@ -3047,9 +3450,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L198",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_198",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_shingle_grounded",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_shingle_grounded"
     },
     {
       "relation": "calls",
@@ -3058,9 +3461,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L231",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_extract_quotes_from_json",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_walk_strings",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_walk_strings"
     },
     {
       "relation": "rationale_for",
@@ -3068,9 +3471,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L216",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_216",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_walk_strings",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_walk_strings"
     },
     {
       "relation": "calls",
@@ -3079,9 +3482,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L252",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_quote_grounding",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_extract_quotes_from_json",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_extract_quotes_from_json"
     },
     {
       "relation": "rationale_for",
@@ -3089,9 +3492,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L228",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_228",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_extract_quotes_from_json",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_extract_quotes_from_json"
     },
     {
       "relation": "calls",
@@ -3100,9 +3503,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L455",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_main",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_read",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_read"
     },
     {
       "relation": "calls",
@@ -3111,9 +3514,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L458",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_main",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_quote_grounding",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_quote_grounding"
     },
     {
       "relation": "calls",
@@ -3122,9 +3525,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L461",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_main",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_report_quotes",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_report_quotes"
     },
     {
       "relation": "calls",
@@ -3144,9 +3547,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L455",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_main",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_entity_grounding",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_entity_grounding"
     },
     {
       "relation": "rationale_for",
@@ -3154,9 +3557,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L307",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_307",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_entity_grounding",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_entity_grounding"
     },
     {
       "relation": "calls",
@@ -3165,9 +3568,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L463",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_main",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_finding_coverage",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_finding_coverage"
     },
     {
       "relation": "rationale_for",
@@ -3175,9 +3578,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L362",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_362",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_finding_coverage",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_finding_coverage"
     },
     {
       "relation": "calls",
@@ -3196,9 +3599,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict"
     },
     {
       "relation": "contains",
@@ -3206,9 +3609,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L182",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_main",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_main"
     },
     {
       "relation": "contains",
@@ -3216,9 +3619,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L164",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
     },
     {
       "relation": "rationale_for",
@@ -3226,9 +3629,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report_rationale_1",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_write_report"
     },
     {
       "relation": "calls",
@@ -3237,9 +3640,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L276",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report_main",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
     },
     {
       "relation": "rationale_for",
@@ -3247,9 +3650,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report_rationale_165",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
     },
     {
       "relation": "calls",
@@ -3258,9 +3661,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L288",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report_main",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict"
     },
     {
       "relation": "contains",
@@ -4891,16 +5294,6 @@
       "target": "agent_reach_service"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "hermes_agent_root",
-      "target": "builder_os_app"
-    },
-    {
       "relation": "conceptually_related_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -4961,16 +5354,6 @@
       "target": "hermes_agent_root"
     },
     {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "builder-os/README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "builder_os_app",
-      "target": "supabase_service"
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -4994,41 +5377,11 @@
       "relation": "shares_data_with",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "builder-os/README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "builder_os_app",
-      "target": "telegram_service"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "venture-studio/README.md",
       "source_location": null,
       "weight": 1.0,
       "source": "venture_studio_app",
       "target": "telegram_service"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "builder-os/README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "builder_os_app",
-      "target": "builder_os_skills_builder_advisor_skill"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "builder-os/README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "builder_os_app",
-      "target": "claude_code_cli"
     },
     {
       "relation": "conceptually_related_to",
@@ -5158,5 +5511,5 @@
       "source_file": "README.md"
     }
   ],
-  "built_at_commit": "f90f9354285b633a4b00a5d4c94e3413d02b4f11"
+  "built_at_commit": "104daab814ffb75c82b0702a29b66c169303a6c6"
 }

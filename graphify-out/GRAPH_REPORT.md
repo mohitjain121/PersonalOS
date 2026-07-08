@@ -1,22 +1,23 @@
 # Graph Report - hermes_agent  (2026-07-08)
 
 ## Corpus Check
-- 36 files · ~37,801 words
+- 37 files · ~39,083 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 218 nodes · 270 edges · 22 communities (17 shown, 5 thin omitted)
+- 235 nodes · 288 edges · 25 communities (19 shown, 6 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f90f9354`
+- Built from commit: `104daab8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Hermes Agent Personal OS
 - Idea Persistence Layer
+- check_provider_auth.py
 - save_work_order.py
 - save_discovery.py
 - weekly_digest.py
@@ -26,8 +27,10 @@
 - Graphify Knowledge Graph Tool
 - write_report.py
 - red_team.py
+- builder-os
 - generate_pdf.py
 - Venture Studio Supabase Schema
+- Claude Code CLI for Work Order Dispatch
 - PDF Report Generation
 - graphify reference: add a URL and watch a folder
 - graphify reference: commit hook and native AGENTS.md integration
@@ -46,9 +49,9 @@
 5. `graphify reference: extra exports and benchmark` - 8 edges
 6. `main()` - 8 edges
 7. `main()` - 8 edges
-8. `Hermes Agent Personal OS` - 8 edges
+8. `main()` - 7 edges
 9. `_normalize()` - 7 edges
-10. `run_role()` - 6 edges
+10. `Hermes Agent Personal OS` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `ADR 0001: Personal AI OS Philosophy` --rationale_for--> `Shared Supabase Client Factory`  [EXTRACTED]
@@ -57,10 +60,10 @@
   README.md → pair-programmer/README.md
 - `Pair Programmer Skill` --references--> `Hermes Agent Personal OS`  [INFERRED]
   pair-programmer/skills/pair-programmer/SKILL.md → README.md
+- `Venture Studio Application` --shares_data_with--> `Telegram Delivery Layer`  [EXTRACTED]
+  venture-studio/README.md → README.md
 - `ADR 0001: Personal AI OS Philosophy` --rationale_for--> `Venture Studio Application`  [EXTRACTED]
   docs/adr/0001-personal-ai-os-philosophy.md → venture-studio/README.md
-- `Venture Studio Application` --references--> `Agent Reach System`  [EXTRACTED]
-  venture-studio/.hermes/CONTEXT.md → ROADMAP.md
 
 ## Import Cycles
 - None detected.
@@ -68,15 +71,19 @@
 ## Hyperedges (group relationships)
 - **Shared Services across All Applications** — hermes_runtime, supabase_service, telegram_service, agent_reach_service, shared_db_py [EXTRACTED 1.00]
 
-## Communities (22 total, 5 thin omitted)
+## Communities (25 total, 6 thin omitted)
 
 ### Community 0 - "Hermes Agent Personal OS"
 Cohesion: 0.10
-Nodes (27): ADR 0001: Personal AI OS Philosophy, Agent Reach System, Agent Reach External Service, Builder OS Application, Builder OS Application, Builder OS Supabase Schema, Save Work Order Script, Builder Advisor Skill (+19 more)
+Nodes (25): ADR 0001: Personal AI OS Philosophy, Agent Reach System, Agent Reach External Service, Builder OS Application, Builder OS Supabase Schema, Save Work Order Script, Builder Advisor Skill, Claude Code Platform (+17 more)
 
 ### Community 1 - "Idea Persistence Layer"
 Cohesion: 0.17
 Nodes (16): get_digest_candidates(), get_idea(), main(), save_idea.py — Supabase persistence for venture-studio  Called by Hermes via exe, Insert a competitor entry., Update an idea's status and optional verdict., Fetch top ideas for weekly digest., Fetch a single idea by ID. (+8 more)
+
+### Community 2 - "check_provider_auth.py"
+Cohesion: 0.27
+Nodes (11): _auth_status(), _configured_providers(), _load_state(), main(), check_provider_auth.py — Standalone watchdog for Hermes's model-provider auth  N, Read only the bytes appended since the last run (cheap, no full-file     rescan), Returns {"provider": ..., "logged_in": bool, "detail": str}., _read_env_var() (+3 more)
 
 ### Community 3 - "save_work_order.py"
 Cohesion: 0.21
@@ -114,6 +121,10 @@ Nodes (25): check_entity_grounding(), check_finding_coverage(), check_quote_grou
 Cohesion: 0.50
 Nodes (4): extract_json(), main(), red_team.py — Sequential adversarial review over the specialist role outputs  Th, Extract the first JSON object from possibly-noisy CLI output.
 
+### Community 12 - "builder-os"
+Cohesion: 0.33
+Nodes (5): builder-os, Provider auth watchdog, Setup, Structure, Usage
+
 ### Community 13 - "generate_pdf.py"
 Cohesion: 0.67
 Nodes (3): generate_pdf(), main(), generate_pdf.py — Generates a formatted PDF validation report using WeasyPrint
@@ -139,23 +150,23 @@ Cohesion: 0.14
 Nodes (14): Procedure, Step 0 — Parse the idea, Step 1 — Persist the raw idea to Supabase, Step 2 — MECE research committee (shared corpus → 6 specialists → red team), Step 2a — Build the shared evidence corpus (once per idea), Step 2b — Run the six specialist roles (sequentially, one at a time), Step 2c — Red team (mandatory, only after ALL roles are gated), Step 2d — Gap closure (EXACTLY one iteration, then stop) (+6 more)
 
 ## Knowledge Gaps
-- **64 isolated node(s):** `When to Use`, `Step 0 — Parse the idea`, `Step 1 — Persist the raw idea to Supabase`, `Step 2a — Build the shared evidence corpus (once per idea)`, `Step 2b — Run the six specialist roles (sequentially, one at a time)` (+59 more)
+- **68 isolated node(s):** `Setup`, `Usage`, `Provider auth watchdog`, `Structure`, `When to Use` (+63 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `get_client()` connect `save_discovery.py` to `Idea Persistence Layer`, `save_work_order.py`, `weekly_digest.py`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **Why does `Idea Validator` connect `Hermes Agent Personal OS` to `Procedure`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **Why does `Procedure` connect `Procedure` to `Hermes Agent Personal OS`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **What connects `When to Use`, `Step 0 — Parse the idea`, `Step 1 — Persist the raw idea to Supabase` to the rest of the system?**
-  _109 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **What connects `Setup`, `Usage`, `Provider auth watchdog` to the rest of the system?**
+  _116 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Hermes Agent Personal OS` be split into smaller, more focused modules?**
-  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09538461538461539 - nodes in this community are weakly interconnected._
 - **Should `MECE Research Committee` be split into smaller, more focused modules?**
   _Cohesion score 0.08 - nodes in this community are weakly interconnected._
 - **Should `write_report.py` be split into smaller, more focused modules?**

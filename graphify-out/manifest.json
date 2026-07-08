@@ -75,9 +75,9 @@
     "semantic_hash": "6d0842072da78b22a849b07c5202e185"
   },
   "builder-os/README.md": {
-    "mtime": 1783077021.1788247,
-    "ast_hash": "e6d031a9038cc30e28b73d4eacc29b4c",
-    "semantic_hash": "e6d031a9038cc30e28b73d4eacc29b4c"
+    "mtime": 1783496867.2926548,
+    "ast_hash": "f10b0de327bcc9f353c805db96b29d93",
+    "semantic_hash": ""
   },
   "builder-os/skills/builder-advisor/SKILL.md": {
     "mtime": 1783077900.0840971,
@@ -182,6 +182,11 @@
   "venture-studio/skills/idea-validator/reports/20260703-AI-Character-Entertainment-Platform.md": {
     "mtime": 1783096339.1102686,
     "ast_hash": "38e7f244c5fced947a8e492943c07f80",
+    "semantic_hash": ""
+  },
+  "builder-os/scripts/check_provider_auth.py": {
+    "mtime": 1783496663.3493629,
+    "ast_hash": "0a01cd2c545401e6d909bf2b28b42025",
     "semantic_hash": ""
   }
 }
