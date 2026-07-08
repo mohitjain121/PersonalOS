@@ -21,6 +21,22 @@ See `docs/adr/0001-personal-ai-os-philosophy.md` for the full reasoning — in s
 
 **Request a change** — a feature, bug fix, refactor, or doc update, in plain language. Builder OS dispatches the classification/drafting itself to Claude Code (not its own judgment), posts the resulting Work Order for your confirmation, dispatches a plan from that same Claude session, relays the plan for a second, separate approval, then resumes it again to implement and commit. Builder OS itself never edits code — it only reads context, dispatches, and independently verifies the diff before marking a Work Order done. Everyday scanning and Q&A (Branches A/B) stay on Builder OS's own configured model; only Work Order dispatch (Branch C) runs through Claude Code, so it can use a Claude Pro/Max subscription login instead of separate API credits if one is available in the environment.
 
+## Provider auth watchdog
+
+Standalone, NOT an agent skill — `scripts/check_provider_auth.py` runs on a Windows Scheduled Task (`HermesProviderAuthWatchdog`, every 30 min), independent of the Hermes agent loop. This exists because of a real 2026-07-06 to 2026-07-08 incident: the Nous Portal OAuth token went dead, and every Telegram message got a fast, generic fallback reply (`api_calls=0`) instead of a real response — silently, for the better part of three days, because nothing outside the broken agent loop was watching it. A check that depends on the agent to notice its own brokenness has the same failure mode as trusting unverified LLM output, so this is a deterministic script with no LLM involved, alerting straight to this project's own Builder OS Telegram topic via the Bot HTTP API.
+
+Detection: `hermes auth status <provider>` for every provider in `model.provider`/`fallback_providers`, plus a scan of new `gateway.log` lines for `Primary provider auth failed` since the last run (catches a token that's present-but-invalid even if `auth status` doesn't reflect it yet). Alerts are deduped — fires on healthy→unhealthy and unhealthy→healthy transitions, plus a reminder every 4 hours if still broken.
+
+Re-register after moving the repo or updating Hermes's venv path:
+```powershell
+$py = "C:\Users\<you>\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe"
+$script = "<repo>\builder-os\scripts\check_provider_auth.py"
+$action = New-ScheduledTaskAction -Execute $py -Argument "`"$script`""
+$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Minutes 30) -RepetitionDuration (New-TimeSpan -Days 3650)
+Register-ScheduledTask -TaskName "HermesProviderAuthWatchdog" -Action $action -Trigger $trigger -Force
+```
+Verify wiring any time with `python builder-os/scripts/check_provider_auth.py --self-test` (sends a real Telegram message regardless of health state).
+
 ## Structure
 
 ```
@@ -30,6 +46,8 @@ builder-os/
 │   └── scripts/
 │       ├── save_discovery.py    # Supabase persistence for discoveries, via shared/db.py
 │       └── save_work_order.py   # Supabase persistence for Work Orders, via shared/db.py
+├── scripts/
+│   └── check_provider_auth.py   # standalone provider-auth watchdog (Windows Scheduled Task, not agent-invoked)
 └── supabase/
     └── schema.sql                # builder_discoveries + builder_work_orders tables
 ```
