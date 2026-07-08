@@ -213,11 +213,18 @@ def main():
         print(json.dumps({"error": f"Red team file not found: {args.red_team}"}))
         sys.exit(1)
     with open(args.red_team, "r", encoding="utf-8", errors="replace") as f:
-        try:
-            red_team_data = json.load(f)
-        except json.JSONDecodeError as e:
-            print(json.dumps({"error": f"Red team file is not valid JSON: {e}"}))
-            sys.exit(1)
+        red_team_text = f.read()
+    try:
+        # raw_decode (not json.load/json.loads) tolerates a trailing duplicate
+        # JSON blob after the first complete object — this happened for real
+        # (2026-07-08): two overlapping red_team.py writes to the same path
+        # left a second JSON dump concatenated after the first, which
+        # json.load rejects as "Extra data" even though the real result is
+        # intact and parseable.
+        red_team_data, _ = json.JSONDecoder().raw_decode(red_team_text.strip())
+    except json.JSONDecodeError as e:
+        print(json.dumps({"error": f"Red team file is not valid JSON: {e}"}))
+        sys.exit(1)
     red_team_insights = red_team_data.get("consolidated_insights", red_team_data)
     kill_score = (red_team_insights.get("kill_likelihood") or {}).get("score_pct")
 

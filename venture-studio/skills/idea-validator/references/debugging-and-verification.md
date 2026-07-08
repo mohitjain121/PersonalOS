@@ -65,3 +65,33 @@ If model JSON parsing truncates or fails for a track:
 - You may transcode valid `raw_model_responses[*].response` entries into report sections manually
 - Add a `Research Process Note` explaining why that track is partial
 - Do NOT fabricate structured `consolidated_insights` when the ensemble did not produce them
+
+## `red_team.py` output may contain trailing duplicate JSON
+
+When `claude -p` produces long responses, `red_team.py`'s stdout can contain two complete JSON objects: the primary red-team envelope followed by a duplicate tail from an earlier reasoning trace or retry. This causes `write_report.py` to fail with `Extra data: line N column M (char X)` and the report never generates. Fix before re-running `write_report.py`: extract the first parseable JSON object and retrim the file. One-line proof-of-concept:
+
+```
+python -c "import json; t=open(path).read(); s=t.index('{'); d=0; e=s
+for i,ch in enumerate(t[s:],s):
+  d+=ch=='{'; d-=ch=='}';
+  if d==0: e=i; break
+json.dump(json.loads(t[s:e+1]), open(path,'w'), ensure_ascii=False, indent=2)"
+```
+
+This preserves the live red-team findings without hand-editing.
+
+## `save-competitor` database constraint
+
+`save_idea.py save-competitor` rejects `threat-level` values that don't match the `competitors_threat_level_check` constraint. Observed valid values are lowercase slugs: `high`, `medium`, `low`. Hyphenated values like `low-medium` also fail. When a `23514` constraint violation occurs: lowercase the threat level and retry once; if it still fails, treat as soft failure (continue with other competitors, note explicitly in Telegram message). Do not abort the pipeline.
+
+## `trim_red_team_json.py` helper
+
+Location: `scripts/trim_red_team_json.py`
+
+When `red_team.json` contains a duplicate JSON tail and `write_report.py` fails with `Extra data`, use this helper instead of hand-editing:
+
+```bash
+python C:\Users\mjain\OneDrive\Documents\hermes_agent\venture-studio\skills\idea-validator\scripts\trim_red_team_json.py C:\Users\mjain\AppData\Local\hermes\venture-studio\corpus\red_team.json
+```
+
+It overwrites the file with the first complete JSON object. Re-run `verify_research_data.py check-synthesis-output` after trimming.
