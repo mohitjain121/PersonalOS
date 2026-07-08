@@ -170,13 +170,13 @@
     "semantic_hash": ""
   },
   "venture-studio/skills/idea-validator/SKILL.md": {
-    "mtime": 1783497466.4125652,
-    "ast_hash": "2c41d528c13ee6bf6e5e8dbe0f3bdc75",
+    "mtime": 1783512995.1138506,
+    "ast_hash": "30401ed14ea34144e07d9cfda4b7b0c8",
     "semantic_hash": ""
   },
   "venture-studio/skills/idea-validator/references/debugging-and-verification.md": {
-    "mtime": 1783162714.7184544,
-    "ast_hash": "f27a48dac10b28d3528c9fc1dddda08e",
+    "mtime": 1783500597.4891822,
+    "ast_hash": "7e104d8fa4feeb4897973f62b6bc0ee0",
     "semantic_hash": ""
   },
   "venture-studio/skills/idea-validator/reports/20260703-AI-Character-Entertainment-Platform.md": {
@@ -187,6 +187,11 @@
   "builder-os/scripts/check_provider_auth.py": {
     "mtime": 1783496663.3493629,
     "ast_hash": "0a01cd2c545401e6d909bf2b28b42025",
+    "semantic_hash": ""
+  },
+  "venture-studio/skills/idea-validator/scripts/trim_red_team_json.py": {
+    "mtime": 1783500554.9469593,
+    "ast_hash": "07ddca2de67497909f40decc1f205f84",
     "semantic_hash": ""
   }
 }
