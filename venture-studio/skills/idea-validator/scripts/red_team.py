@@ -39,9 +39,11 @@ import subprocess
 from datetime import datetime
 
 # How much of the raw corpus to show the red team for evidence-quality attacks.
-# The five role outputs are the primary input; the corpus excerpt lets it
-# check claims against what the evidence actually says.
-MAX_CORPUS_EXCERPT_CHARS = 20000
+# The role outputs are the primary input; the corpus lets it check claims
+# against what the evidence actually says. Raised 20K -> 80K (2026-07-08):
+# the red team was attacking evidence quality while seeing under half the
+# evidence. Sonnet handles this comfortably; cost is subscription-window only.
+MAX_CORPUS_EXCERPT_CHARS = 80000
 
 RED_TEAM_PROMPT = """You are the Red Team on a research committee evaluating this decision:
 {idea}

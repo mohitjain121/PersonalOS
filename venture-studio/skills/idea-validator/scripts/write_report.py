@@ -45,9 +45,13 @@ import argparse
 import subprocess
 from datetime import datetime
 
-# Same cap as red_team.py: role outputs are the primary input; the corpus
-# excerpt lets the writer quote real evidence instead of paraphrasing it.
-MAX_CORPUS_EXCERPT_CHARS = 20000
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from verify_research_data import check_finding_coverage, check_report_quotes  # noqa: E402
+
+# Same cap as red_team.py (raised with it 2026-07-08): role outputs are the
+# primary input; the corpus lets the writer quote real evidence instead of
+# paraphrasing it — and the quote-grounding gate rejects anything it invents.
+MAX_CORPUS_EXCERPT_CHARS = 80000
 
 REQUIRED_SECTIONS = [
     "## TL;DR",
@@ -130,6 +134,15 @@ Hard rules:
   it away. Quote verbatim evidence from the corpus excerpt where it exists; never invent
   quotes.
 - Do not soften the red team. Do not let the appendix inflate the verdict.
+- INDIA LENS: when the idea's geography includes India (it does by default), every dimension
+  section must explicitly address the India angle — India market reality in Market, which
+  competitors actually operate in India in Competition, India regulation (DPDP, RBI/SEBI where
+  relevant) in External Constraints, India pricing power and willingness-to-pay in Economics,
+  India-specific demand signal in Demand Reality. Use the corpus's "INDIA FOCUS" sections as
+  the primary source for this. Where India evidence is thin, say so plainly in that section
+  ("India-specific evidence: thin — global data may not transfer because ...") rather than
+  silently extrapolating global numbers to India. Do not create a separate India section;
+  weave it into each dimension.
 
 Return ONLY the markdown report — no preamble, no code fences around the whole document,
 no commentary after it.
@@ -291,6 +304,31 @@ def main():
             f"recurs, the role outputs and red team genuinely disagree — surface "
             f"that to Mohit instead of overriding."
         ), "rejected_output": debug_path}))
+        sys.exit(1)
+
+    # Finding coverage: the writer may not drop or soften fatal/high red-team
+    # findings, and the kill score must be stated (2026-07-08 upgrade, item 3).
+    with open(args.red_team, "r", encoding="utf-8", errors="replace") as f:
+        coverage = check_finding_coverage(report_md, f.read())
+    if not coverage.get("ok"):
+        debug_path = args.output + ".rejected"
+        with open(debug_path, "w", encoding="utf-8") as f:
+            f.write(report_md)
+        coverage["rejected_output"] = debug_path
+        print(json.dumps(coverage))
+        sys.exit(1)
+
+    # Quote grounding: every quoted passage in the report must trace to the
+    # corpus or the gated inputs — quotes are never invented at synthesis time.
+    quote_sources = [corpus_excerpt] if corpus_excerpt != "(not provided)" else []
+    quote_sources += ["\n".join(role_outputs), json.dumps(red_team_insights)]
+    quotes = check_report_quotes(report_md, quote_sources)
+    if not quotes.get("ok"):
+        debug_path = args.output + ".rejected"
+        with open(debug_path, "w", encoding="utf-8") as f:
+            f.write(report_md)
+        quotes["rejected_output"] = debug_path
+        print(json.dumps(quotes))
         sys.exit(1)
 
     with open(args.output, "w", encoding="utf-8") as f:

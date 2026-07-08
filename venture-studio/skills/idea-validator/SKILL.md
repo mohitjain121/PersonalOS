@@ -82,11 +82,11 @@ The six roles and the single question each owns (mandates and boundaries are bak
 | Role | Question |
 |---|---|
 | `demand` | Is the pain real, frequent, urgent — and whose? (pain, ICP, JTBD, workarounds, user sentiment on alternatives, WTP signals, solution–demand fit) |
-| `market` | Is the space attractive? (TAM [Directional] + source spread, growth, industry structure, why-now, demand drivers) |
+| `market` | Is the space attractive? (TAM [Directional] + source spread, growth, industry structure, why-now **tailwinds only** — timing risks belong to `external`, demand drivers) |
 | `competition` | Can a new entrant win? (competitors-as-businesses, funding flows, saturation, moats, whitespace, incumbent response) |
 | `feasibility` | Can it be built and operated — with what, by whom, how fast? (capabilities, data, infra, effort + skills, scalability, cost-to-serve drivers) |
 | `economics` | Is there a credible, affordable route to revenue? (pricing thesis, CAC, LTV/retention, margins, motion, channels, partnerships, frictions, capital intensity) |
-| `external` | What outside forces can kill or unlock it? (regulation, platform dependency, IP/licensing, ethical backlash, timing/macro) |
+| `external` | What outside forces can kill or unlock it? (regulation, platform dependency, IP/licensing, ethical backlash, **all timing/macro headwinds and shocks** — the risk half of any double-edged force) |
 
 Founder fit and the verdict are yours in Step 3 — you have Mohit-context the ensemble doesn't. The red team is a **stage, not another researcher**: it must run AFTER the roles, on their outputs — never in parallel on raw data.
 
@@ -111,18 +111,27 @@ Evidence is intentionally shared across all six roles — mutual exclusivity liv
      ```
      Do this for the *demand* queries above at minimum; also use it for *competition* (`"<competitor> reddit reviews"`, `"<competitor> vs <alternative>"`) and *external* (`"<domain> banned OR lawsuit OR regulation reddit"`) when a competitor or regulatory angle is already named. Append each thread's post text + comments under `=== PAGE: <reddit thread URL> ===`, same as extracted web pages.
    - If not `ok`, fall back to the web-search `site:reddit.com` queries above and note "Reddit: web-indexed snippets only (Agent Reach unavailable)" in the report's Research Process Note — do not silently degrade without saying so.
-3. **Run a last30days engagement-ranked recency pass** — this is a different evidence class from searches and thread pulls: it quantifies *current* community consensus (upvotes, views, comment volume, cross-platform clusters) over the trailing 30 days, which is exactly what static web pages and old threads can't show. The engine lives at `${HERMES_AGENT_ROOT}/last30days-skill/skills/last30days/scripts/last30days.py` and **requires Python 3.12+ — invoke with `python3.14`, NOT bare `python`** (the Hermes venv python is 3.11 and the engine will refuse to run):
+3. **Run a last30days engagement-ranked recency pass** — this is a different evidence class from searches and thread pulls: it quantifies *current* community consensus (upvotes, views, comment volume, cross-platform clusters) over the trailing 30 days, which is exactly what static web pages and old threads can't show. The engine lives at `C:/Users/mjain/OneDrive/Documents/hermes_agent/last30days-skill/skills/last30days/scripts/last30days.py` and **requires Python 3.12+ — invoke with `python3.14`, NOT bare `python`** (the Hermes venv python is 3.11 and the engine will refuse to run):
    ```bash
    python3.14 <engine path> "<idea topic phrase>" --days 30 --emit=md --output "<corpus dir>/last30days_<slug>.md" \
      --subreddits "<comma-separated subreddits already discovered in steps 1-2>"
    ```
    You are the planner: resolve entities BEFORE calling the engine (pass `--subreddits` from communities found in the searches; add `--polymarket-keywords` when the domain has regulatory/event risk, `--github-repo` when a competitor is open-source; for consumer/B2C ideas add `--tiktok-hashtags`/`--ig-creators` — TikTok and Instagram are live via ScrapeCreators but credit-metered, so keep the default depth and skip them for B2B/infra ideas where consumer social signal is noise). A bare keyword call without resolution flags returns noisy matches — the engine will warn you. Append the emitted markdown into the corpus under a `=== PAGE: last30days:<topic> ===` header. Treat its "Freshness" note as evidence: "recent evidence is thin" is itself a demand-side data point. If the engine is missing or errors, skip and note "no recency pass" in the Research Process Note — do not block the run on it.
 4. **Extract full page content for the top 5–8 substantive URLs per dimension group — search snippets alone are not research.** A snippet is a 1–2 line SEO description; a report synthesized from snippets can never be better than a Google results page (this was the quality ceiling behind the 2026-07-03 mediocre report). Append each page's content under a `=== PAGE: <url> ===` header after the search-results sections. Prefer primary-ish sources (company statements, app-analytics firms like Business of Apps/Sensor Tower, actual forum threads, regulator pages) over SEO report-mill pages. If a page fails to extract, pick the next URL down.
-5. **Persist everything as ONE corpus file using the `write_file` tool itself** (not a script running inside `execute_code`) — this is the one mechanism in this toolchain engineered to resolve the same real path regardless of which tool reads it back. **Capture the exact `resolved_path` string `write_file` returns** — never re-type or guess a path like `/tmp/corpus.txt` yourself.
-6. **Run the integrity gate on the corpus:**
+5. **Build competitor dossiers for the top 2–3 named competitors.** Once the searches and social pulls have surfaced who the real competitors are, give each a targeted evidence section — the generic corpus describes the *category*; dossiers describe the *incumbents you'd actually fight*. Per competitor, gather what applies:
+   - **User sentiment**: `opencli reddit search "<competitor> review OR sucks OR alternative"` → `opencli reddit read` the top 1–2 threads (real complaints about incumbents are whitespace evidence)
+   - **Scaling signal**: include the competitor's name in the last30days call's topic or run `--hiring-signals` — who is hiring is who is scaling
+   - **If open-source**: `gh repo view <org/repo>` for stars/activity/release cadence
+   - **Business facts**: extract 1–2 pages on funding/pricing (Crunchbase-reported news pages, their own pricing page)
+   Append each under `=== COMPETITOR DOSSIER: <name> ===`. These sections feed the `competition` role's threat assessment and the red team's evidence-quality attacks; without them, competitor claims rest on whatever one blog said (the SpicyChat "100M users from a single app-review blog" failure, 2026-07-04).
+6. **India focus supplement (mandatory when geography includes India — the default).** The pipeline runs globally as-is; this adds an India lens at the end of corpus building, NOT a separate research channel. Run 3–5 India-seeded searches (`"<idea/domain> India market"`, `"<solution type> India startups funding"`, `"<domain> India regulation DPDP RBI"` as applicable, `"<competitor> India"`), prefer Indian startup/business media for extraction (Inc42, YourStory, Entrackr, Economic Times tech), and check Indian subreddits (r/india, r/StartupIndia, r/IndiaInvestments) via the same agent-reach flow as item 2. Append under `=== INDIA FOCUS ===` headers. If India evidence is genuinely thin, that thinness is itself a finding — do not pad; the report will state it honestly.
+7. **Persist everything as ONE corpus file using the `write_file` tool itself** (not a script running inside `execute_code`) — this is the one mechanism in this toolchain engineered to resolve the same real path regardless of which tool reads it back. **Capture the exact `resolved_path` string `write_file` returns** — never re-type or guess a path like `/tmp/corpus.txt` yourself.
+8. **Run the integrity gates on the corpus (both):**
    ```bash
    python ${HERMES_SKILL_DIR}/scripts/verify_research_data.py check-raw-data --file "<CORPUS_RESOLVED_PATH>" --min-bytes 25000
+   python ${HERMES_SKILL_DIR}/scripts/verify_research_data.py check-entity-grounding --file "<CORPUS_RESOLVED_PATH>" --terms "<COMMA_SEPARATED_ENTITY_TERMS>"
    ```
+   For `--terms`, pass the idea's proper nouns and problem keywords from Step 0 (e.g. `"AI companion,character.ai,interactive drama"`). The entity gate fails when >40% of corpus bytes never mention the idea (off-topic keyword noise); on a `warning` about specific dead sections, delete those sections from the corpus and re-run both gates — dead sections dilute every role's reading budget.
    This exits non-zero if the file is missing, too small, or doesn't look like a real search dump (this is exactly how the fabricated placeholders from the 2026-07-03 incident would have been caught). The floor also catches a corpus that skipped page extraction. Only if extraction is broken across the board may you fall back to snippets-only — then run the gate with the default `--min-bytes` instead and note "snippet-only research" in a `Research Process Note` section of the report. **If the gate fails, do not proceed and do not fabricate a fix** — re-gather, or stop and say so per the fabrication rule above.
 
 #### Step 2b — Run the six specialist roles (sequentially, one at a time)
@@ -131,12 +140,15 @@ For each role in `demand`, `market`, `competition`, `feasibility`, `economics`, 
 ```bash
 python ${HERMES_SKILL_DIR}/scripts/multi_model_research.py --role <role> --raw-data-file "<CORPUS_RESOLVED_PATH>" > "<role>.json"
 ```
-(Write each stdout to a file in the same directory as the corpus so Step 2c can read them back. **Redirect stdout only — never use `2>&1`**: the script's fallback-progress messages go to stderr, and merging them into the file corrupts the JSON envelope and fails the gate with "Output is not valid JSON".) Then gate each:
+(Write each stdout to a file in the same directory as the corpus so Step 2c can read them back. **Redirect stdout only — never use `2>&1`**: the script's fallback-progress messages go to stderr, and merging them into the file corrupts the JSON envelope and fails the gate with "Output is not valid JSON".) Then gate each — both checks:
 ```bash
 python ${HERMES_SKILL_DIR}/scripts/verify_research_data.py check-synthesis-output --file "<role>.json"
+python ${HERMES_SKILL_DIR}/scripts/verify_research_data.py check-quote-grounding --file "<role>.json" --corpus "<CORPUS_RESOLVED_PATH>"
 ```
+The quote gate fails if any "verbatim" quote in the role output cannot be traced to the corpus — that quote was invented, and it must not reach the red team or the report. On failure: re-run that role once; if it fails again, use the role's output only after stripping the ungrounded quotes, and note it in the report's Research Process Note.
 
 - The script tries the role's model list in order until one returns parseable JSON (`--models` can override the list). Run roles **one at a time** — parallel invocations burst the free-tier rate limits.
+- **Second opinions for the two verdict-driving roles (mandatory):** after `demand` and `economics` are gated, run each a second time with a different model, so single-model hallucination in those dimensions can't pass unchallenged. Read `models_used` from the first output's envelope, then rerun with `--models` set to the role's chain **minus that model** (e.g. if demand's first run answered via `google/gemma-4-26b-a4b-it:free`, rerun with `--models "meta-llama/llama-3.3-70b-instruct:free,qwen/qwen-2.5-72b-instruct:free,nousresearch/hermes-3-llama-3.1-405b:free"`). Write to `demand_2.json` / `economics_2.json` and gate both exactly like the primaries (both checks). If the second opinion fails through its whole chain (rate caps), proceed without it and note "no second opinion for <role>" in the Research Process Note — the primary is still gated evidence; do not block the run.
 - **A role call can take several minutes worst-case** (each 429'd fallback model adds retry backoff). Invoke the terminal with an extended timeout (600s) for these calls rather than the 180s default — a timeout kill mid-chain wastes the models that already answered.
 - A role that fails through all its fallbacks is a **missing dimension of the decision**, not a cosmetic gap. Hard stop for that role: tell Mohit which dimension is missing and why, per the fabrication rule. Do not write that report section from nothing.
 
@@ -144,13 +156,27 @@ python ${HERMES_SKILL_DIR}/scripts/verify_research_data.py check-synthesis-outpu
 
 ```bash
 python ${HERMES_SKILL_DIR}/scripts/red_team.py --idea "<TITLE>: <ONE_LINE_DESCRIPTION>" \
-  --inputs "<demand.json>" "<market.json>" "<competition.json>" "<feasibility.json>" "<economics.json>" "<external.json>" \
+  --inputs "<demand.json>" "<demand_2.json>" "<market.json>" "<competition.json>" "<feasibility.json>" "<economics.json>" "<economics_2.json>" "<external.json>" \
   --corpus "<CORPUS_RESOLVED_PATH>" > "red_team.json"
 python ${HERMES_SKILL_DIR}/scripts/verify_research_data.py check-synthesis-output --file "red_team.json"
 ```
 
+Include the `demand_2.json`/`economics_2.json` second opinions when they exist — where the two runs of the same role disagree (different pain severity, different margin math), that disagreement is exactly what the red team should exploit; where they agree independently, that claim is stronger. Omit them only if the second-opinion runs were skipped.
+
 - Runs Claude Sonnet through the locally-authenticated `claude` CLI (Mohit's Claude subscription — no API key involved). If `claude` is missing or unauthenticated this is a **hard stop**: tell Mohit. Do not substitute a weaker model as red team — adversarial review by a weak model is worse than none because it launders bad theses as "reviewed".
 - Use the red team's output in Step 3: its `falsification_test` entries are the source for the **Lowest-Cost Validation Experiment** section; its `unowned_considerations` go into **Open Questions**; its `kill_likelihood` constrains the verdict (see Step 3 synthesis rules).
+
+#### Step 2d — Gap closure (EXACTLY one iteration, then stop)
+
+Real research answers its own objections. After the red team is gated, check its `evidence_quality_attacks`: does any attack say evidence for a claim is **absent or single-source** (not merely weak)? If none do, skip this step entirely.
+
+If yes, close the gaps — once:
+1. For each such attack (cap at the 4 most severe), run 1–2 **targeted** searches/pulls for exactly the missing evidence (e.g. attack says "SpicyChat's 100M users rests on one app-review blog" → search for a second independent source for that number; attack says "no India pricing evidence" → targeted India pricing search). Use whichever tool fits: web search + extraction, agent-reach thread pull, last30days with tightened flags.
+2. Append findings — including honest negative results ("no independent confirmation found") — under `=== GAP CLOSURE: <attack summary> ===` headers, re-persist the corpus, re-run BOTH corpus gates.
+3. Re-run **only the roles whose dimension was attacked** (same commands, same two gates per role). Unattacked roles' outputs stand.
+4. Re-run the red team once on the updated inputs, re-gate it. The second red-team output is final.
+
+**Hard bound: this loop runs at most once per idea, ever.** If the second red team still attacks evidence quality, those attacks go into the report as-is (Open Questions / Research Process Note) — that is an honest finding about the evidence landscape, not a defect to iterate away. Never loop back from Step 2d to Step 2d.
 
 ---
 
@@ -170,7 +196,7 @@ python ${HERMES_SKILL_DIR}/scripts/write_report.py \
 
 (Redirect nothing — the script writes the report to `--output` itself and prints a JSON envelope to stdout. As always, never use `2>&1`.)
 
-The envelope contains `report_path`, `verdict`, and `kill_likelihood`. The script mechanically enforces the required section structure and the red-team verdict constraint, and exits non-zero with a `.rejected` debug file if the report violates either — on failure, rerun once; if it fails again, surface the error to Mohit rather than writing the report yourself silently.
+The envelope contains `report_path`, `verdict`, and `kill_likelihood`. The script mechanically enforces four rails — required section structure, the red-team verdict constraint, red-team finding coverage (no fatal/high finding may be dropped or softened, and the kill score must be stated), and quote grounding (every source-attributed quote must trace to the corpus or gated inputs) — and exits non-zero with a `.rejected` debug file if the report violates any — on failure, rerun once; if it fails again, surface the error to Mohit rather than writing the report yourself silently.
 
 **Fallback (only if the envelope says the `claude` CLI is missing):** write the report yourself following the skeleton below, and add a *Research Process Note* at the top stating the prose was written by the session model, not the synthesis model.
 
@@ -336,6 +362,21 @@ Promising — real pain, crowded with generic tools, differentiation possible on
 
 [[as_document]]
 ```
+
+---
+
+### Step 8 — Post-verdict watchlist (verdicts must stay falsifiable)
+
+Every report ships kill assumptions and falsification tests; this step makes sure reality gets to vote on them later. After Telegram delivery, add the idea's space to the last30days watchlist (weekly cadence — verdict drift is a weeks-scale phenomenon):
+
+```bash
+python3.14 C:/Users/mjain/OneDrive/Documents/hermes_agent/last30days-skill/skills/last30days/scripts/watchlist.py add "<PRIMARY_ENTITY_OR_SPACE>" --weekly --queries "<top 2-3 kill-assumption phrases as search queries>"
+```
+
+- `<PRIMARY_ENTITY_OR_SPACE>` is the idea's space, not its title (e.g. "AI companion apps regulation", not "AI Entertainment Companion Platform").
+- Seed `--queries` from the red team's top kill reasons — the watchlist should track exactly what would change the verdict (e.g. "character.ai lawsuit ruling", "SpicyChat funding").
+- This is non-blocking: if it fails, note it and finish — the report already shipped.
+- Digests: findings accumulate in the watchlist store; a weekly digest comes from `watchlist.py run-all` + `briefing.py generate --weekly` (invoked from a Hermes scheduled session or manually via `/last30days` watch commands). When a digest shows a kill assumption moved (regulation shifted, a competitor stumbled, complaints spiked), tell Mohit the verdict may be stale and offer a re-validation run.
 
 ---
 

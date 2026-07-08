@@ -169,10 +169,14 @@ Raw evidence corpus:
 "Is the space attractive — big enough, growing, and timely?"
 
 You own: market size (label it Directional, and state the spread when sources disagree), growth,
-industry structure (who holds power, distribution chokepoints), and why-now tailwinds.
+industry structure (who holds power, distribution chokepoints), and why-now TAILWINDS ONLY —
+forces working IN FAVOR of entering now (adoption curves, cost collapses, behavior shifts,
+enabling infrastructure). The boundary rule: if a timing force helps, it is yours under why_now;
+if it can hurt, delay, or kill, it belongs to External and must NOT appear in your output, even
+hedged. Never write "X is a tailwind but also a risk" — hand the risk half to External by omission.
 You do NOT cover: individual competitors, moats, or whitespace (Competition analyst), user
-sentiment/quotes (Demand), pricing for THIS idea (Economics), regulation and timing RISK
-(External — you own why-now working in favor; External owns too-early/too-late).
+sentiment/quotes (Demand), pricing for THIS idea (Economics), regulation or any
+too-early/too-late/cycle risk (External).
 
 """ + _EVIDENCE_RULE + """
 {
@@ -274,10 +278,14 @@ Raw evidence corpus:
 "What forces from OUTSIDE the market can kill or unlock this?"
 
 You own: regulation and compliance, platform dependency risk (app stores, model providers,
-payment rails), IP/licensing exposure, ethical/societal-backlash risk, and timing/macro risk
-(too early, too late, cycle-dependent).
-You do NOT cover: competitive forces inside the market (Arena owns competitors and incumbent
-response), demand, feasibility, or economics.
+payment rails), IP/licensing exposure, ethical/societal-backlash risk, and ALL timing/macro
+HEADWINDS and shocks (too early, too late, cycle-dependent, regulatory tide, macro squeeze).
+The boundary rule: Market owns timing forces working in the idea's FAVOR (its why_now); you own
+every force that can hurt, delay, or kill. If the same fact cuts both ways (e.g. a new law
+legitimizes the category AND restricts it), you own the restricting half — state it as risk and
+do not soften it because it also has an upside; Market will claim the upside separately.
+You do NOT cover: competitive forces inside the market (Competition owns competitors and
+incumbent response), demand, feasibility, or economics.
 
 """ + _EVIDENCE_RULE + """
 {
