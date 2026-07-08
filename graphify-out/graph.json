@@ -1,35 +1,287 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {
-    "hyperedges": [
-      {
-        "id": "shared_services_architecture",
-        "label": "Shared Services across All Applications",
-        "nodes": [
-          "hermes_runtime",
-          "supabase_service",
-          "telegram_service",
-          "agent_reach_service",
-          "shared_db_py"
-        ],
-        "relation": "participate_in",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "README.md"
-      }
-    ]
-  },
+  "graph": {},
   "nodes": [
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 20,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "hermes_agent",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_hermes_agent",
+      "community": 20,
+      "norm_label": "hermes_agent"
+    },
+    {
+      "label": "Architecture",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "readme_architecture",
+      "community": 20,
+      "norm_label": "architecture"
+    },
+    {
+      "label": "What's here today",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "readme_what_s_here_today",
+      "community": 20,
+      "norm_label": "what's here today"
+    },
+    {
+      "label": "Shared services & tooling",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "readme_shared_services_tooling",
+      "community": 20,
+      "norm_label": "shared services & tooling"
+    },
+    {
+      "label": "Setup",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "readme_setup",
+      "community": 20,
+      "norm_label": "setup"
+    },
+    {
+      "label": "Planned",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "readme_planned",
+      "community": 20,
+      "norm_label": "planned"
+    },
+    {
+      "label": "License",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "readme_license",
+      "community": 20,
+      "norm_label": "license"
+    },
+    {
+      "label": "ROADMAP.md",
+      "file_type": "document",
+      "source_file": "ROADMAP.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "roadmap",
+      "community": 29,
+      "norm_label": "roadmap.md"
+    },
+    {
+      "label": "Roadmap",
+      "file_type": "document",
+      "source_file": "ROADMAP.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "roadmap_roadmap",
+      "community": 29,
+      "norm_label": "roadmap"
+    },
+    {
+      "label": "Done",
+      "file_type": "document",
+      "source_file": "ROADMAP.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "roadmap_done",
+      "community": 29,
+      "norm_label": "done"
+    },
+    {
+      "label": "In progress",
+      "file_type": "document",
+      "source_file": "ROADMAP.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "roadmap_in_progress",
+      "community": 29,
+      "norm_label": "in progress"
+    },
+    {
+      "label": "Open / blocked",
+      "file_type": "document",
+      "source_file": "ROADMAP.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "roadmap_open_blocked",
+      "community": 29,
+      "norm_label": "open / blocked"
+    },
+    {
+      "label": "Next",
+      "file_type": "document",
+      "source_file": "ROADMAP.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "roadmap_next",
+      "community": 29,
+      "norm_label": "next"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "venture_studio_readme",
+      "community": 5,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "venture-studio",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "venture_studio_readme_venture_studio",
+      "community": 5,
+      "norm_label": "venture-studio"
+    },
+    {
+      "label": "Architecture",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "venture_studio_readme_architecture",
+      "community": 5,
+      "norm_label": "architecture"
+    },
+    {
+      "label": "Stack",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "venture_studio_readme_stack",
+      "community": 5,
+      "norm_label": "stack"
+    },
+    {
+      "label": "Setup",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "venture_studio_readme_setup",
+      "community": 5,
+      "norm_label": "setup"
+    },
+    {
+      "label": "1. Supabase",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "venture_studio_readme_1_supabase",
+      "community": 5,
+      "norm_label": "1. supabase"
+    },
+    {
+      "label": "2. Hermes `.env`",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "venture_studio_readme_2_hermes_env",
+      "community": 5,
+      "norm_label": "2. hermes `.env`"
+    },
+    {
+      "label": "3. Register the skill with Hermes",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "venture_studio_readme_3_register_the_skill_with_hermes",
+      "community": 5,
+      "norm_label": "3. register the skill with hermes"
+    },
+    {
+      "label": "4. Telegram forum topic",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "venture_studio_readme_4_telegram_forum_topic",
+      "community": 5,
+      "norm_label": "4. telegram forum topic"
+    },
+    {
+      "label": "5. Evidence sources",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "venture_studio_readme_5_evidence_sources",
+      "community": 5,
+      "norm_label": "5. evidence sources"
+    },
+    {
+      "label": "Usage",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "venture_studio_readme_usage",
+      "community": 5,
+      "norm_label": "usage"
+    },
+    {
+      "label": "Project Structure",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "venture_studio_readme_project_structure",
+      "community": 5,
+      "norm_label": "project structure"
+    },
+    {
+      "label": "PDF Reports",
+      "file_type": "document",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "venture_studio_readme_pdf_reports",
+      "community": 5,
+      "norm_label": "pdf reports"
+    },
     {
       "label": "debugging-and-verification.md",
       "file_type": "document",
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification",
       "community": 17,
-      "norm_label": "debugging-and-verification.md"
+      "norm_label": "debugging-and-verification.md",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification"
     },
     {
       "label": "Idea Validator \u2014 Debugging & Verification Notes",
@@ -37,9 +289,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
       "community": 17,
-      "norm_label": "idea validator \u2014 debugging & verification notes"
+      "norm_label": "idea validator \u2014 debugging & verification notes",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes"
     },
     {
       "label": "MECE role architecture (2026-07-04 redesign)",
@@ -47,9 +299,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_mece_role_architecture_2026_07_04_redesign",
       "community": 17,
-      "norm_label": "mece role architecture (2026-07-04 redesign)"
+      "norm_label": "mece role architecture (2026-07-04 redesign)",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_mece_role_architecture_2026_07_04_redesign"
     },
     {
       "label": "Repaired `multi_model_research.py` behavior",
@@ -57,9 +309,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior",
       "community": 17,
-      "norm_label": "repaired `multi_model_research.py` behavior"
+      "norm_label": "repaired `multi_model_research.py` behavior",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior"
     },
     {
       "label": "Prompt assembly",
@@ -67,9 +319,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_prompt_assembly",
       "community": 17,
-      "norm_label": "prompt assembly"
+      "norm_label": "prompt assembly",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_prompt_assembly"
     },
     {
       "label": "Truncation and rate limits (fixed 2026-07-04)",
@@ -77,9 +329,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_truncation_and_rate_limits_fixed_2026_07_04",
       "community": 17,
-      "norm_label": "truncation and rate limits (fixed 2026-07-04)"
+      "norm_label": "truncation and rate limits (fixed 2026-07-04)",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_truncation_and_rate_limits_fixed_2026_07_04"
     },
     {
       "label": "Reasoning-channel responses",
@@ -87,9 +339,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L30",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_reasoning_channel_responses",
       "community": 17,
-      "norm_label": "reasoning-channel responses"
+      "norm_label": "reasoning-channel responses",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_reasoning_channel_responses"
     },
     {
       "label": "Model availability",
@@ -97,9 +349,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L35",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_model_availability",
       "community": 17,
-      "norm_label": "model availability"
+      "norm_label": "model availability",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_model_availability"
     },
     {
       "label": "Empty-consolidation gate",
@@ -107,9 +359,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L40",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_empty_consolidation_gate",
       "community": 17,
-      "norm_label": "empty-consolidation gate"
+      "norm_label": "empty-consolidation gate",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_empty_consolidation_gate"
     },
     {
       "label": "Stdout JSON extraction",
@@ -117,9 +369,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L44",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_stdout_json_extraction",
       "community": 17,
-      "norm_label": "stdout json extraction"
+      "norm_label": "stdout json extraction",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_stdout_json_extraction"
     },
     {
       "label": "Persistence quirks",
@@ -127,9 +379,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L51",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_persistence_quirks",
       "community": 17,
-      "norm_label": "persistence quirks"
+      "norm_label": "persistence quirks",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_persistence_quirks"
     },
     {
       "label": "Raw-data file paths",
@@ -137,9 +389,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L57",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_raw_data_file_paths",
       "community": 17,
-      "norm_label": "raw-data file paths"
+      "norm_label": "raw-data file paths",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_raw_data_file_paths"
     },
     {
       "label": "Acceptable partial-track fallback",
@@ -147,9 +399,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L62",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_acceptable_partial_track_fallback",
       "community": 17,
-      "norm_label": "acceptable partial-track fallback"
+      "norm_label": "acceptable partial-track fallback",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_acceptable_partial_track_fallback"
     },
     {
       "label": "`red_team.py` output may contain trailing duplicate JSON",
@@ -157,9 +409,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L69",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_red_team_py_output_may_contain_trailing_duplicate_json",
       "community": 17,
-      "norm_label": "`red_team.py` output may contain trailing duplicate json"
+      "norm_label": "`red_team.py` output may contain trailing duplicate json",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_red_team_py_output_may_contain_trailing_duplicate_json"
     },
     {
       "label": "`save-competitor` database constraint",
@@ -167,9 +419,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L83",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_save_competitor_database_constraint",
       "community": 17,
-      "norm_label": "`save-competitor` database constraint"
+      "norm_label": "`save-competitor` database constraint",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_save_competitor_database_constraint"
     },
     {
       "label": "`trim_red_team_json.py` helper",
@@ -177,9 +429,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L87",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_trim_red_team_json_py_helper",
       "community": 17,
-      "norm_label": "`trim_red_team_json.py` helper"
+      "norm_label": "`trim_red_team_json.py` helper",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_trim_red_team_json_py_helper"
     },
     {
       "label": "trim_red_team_json.py",
@@ -187,9 +439,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/trim_red_team_json.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_trim_red_team_json",
       "community": 19,
-      "norm_label": "trim_red_team_json.py"
+      "norm_label": "trim_red_team_json.py",
+      "id": "venture_studio_skills_idea_validator_scripts_trim_red_team_json"
     },
     {
       "label": "trim()",
@@ -197,9 +449,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/trim_red_team_json.py",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_trim_red_team_json_trim",
       "community": 19,
-      "norm_label": "trim()"
+      "norm_label": "trim()",
+      "id": "venture_studio_skills_idea_validator_scripts_trim_red_team_json_trim"
     },
     {
       "label": "trim_red_team_json.py  Repair a red_team.json corrupted by a trailing duplicat",
@@ -207,9 +459,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/trim_red_team_json.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_trim_red_team_json_rationale_1",
       "community": 19,
-      "norm_label": "trim_red_team_json.py  repair a red_team.json corrupted by a trailing duplicat"
+      "norm_label": "trim_red_team_json.py  repair a red_team.json corrupted by a trailing duplicat",
+      "id": "venture_studio_skills_idea_validator_scripts_trim_red_team_json_rationale_1"
     },
     {
       "label": "write_report.py",
@@ -217,9 +469,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report",
       "community": 18,
-      "norm_label": "write_report.py"
+      "norm_label": "write_report.py",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report"
     },
     {
       "label": "strip_outer_fence()",
@@ -227,9 +479,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L164",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence",
       "community": 18,
-      "norm_label": "strip_outer_fence()"
+      "norm_label": "strip_outer_fence()",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
     },
     {
       "label": "extract_verdict()",
@@ -237,9 +489,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L174",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict",
       "community": 18,
-      "norm_label": "extract_verdict()"
+      "norm_label": "extract_verdict()",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict"
     },
     {
       "label": "main()",
@@ -247,9 +499,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L182",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_main",
       "community": 18,
-      "norm_label": "main()"
+      "norm_label": "main()",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_main"
     },
     {
       "label": "write_report.py \u2014 Final report synthesis by Claude on the local subscription  Th",
@@ -257,9 +509,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_rationale_1",
       "community": 18,
-      "norm_label": "write_report.py \u2014 final report synthesis by claude on the local subscription  th"
+      "norm_label": "write_report.py \u2014 final report synthesis by claude on the local subscription  th",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_rationale_1"
     },
     {
       "label": "Remove one whole-document ```-fence if the model ignored instructions.",
@@ -267,9 +519,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L165",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_rationale_165",
       "community": 18,
-      "norm_label": "remove one whole-document ```-fence if the model ignored instructions."
+      "norm_label": "remove one whole-document ```-fence if the model ignored instructions.",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_rationale_165"
     },
     {
       "label": "SKILL.md",
@@ -277,7 +529,7 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 28,
       "norm_label": "skill.md",
       "id": "venture_studio_skills_idea_validator_skill"
     },
@@ -287,7 +539,7 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 0,
+      "community": 28,
       "norm_label": "idea validator",
       "id": "venture_studio_skills_idea_validator_skill_idea_validator"
     },
@@ -297,7 +549,7 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 0,
+      "community": 28,
       "norm_label": "when to use",
       "id": "venture_studio_skills_idea_validator_skill_when_to_use"
     },
@@ -447,7 +699,7 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L392",
       "_origin": "ast",
-      "community": 0,
+      "community": 28,
       "norm_label": "pitfalls",
       "id": "venture_studio_skills_idea_validator_skill_pitfalls"
     },
@@ -457,7 +709,7 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L416",
       "_origin": "ast",
-      "community": 0,
+      "community": 28,
       "norm_label": "verification",
       "id": "venture_studio_skills_idea_validator_skill_verification"
     },
@@ -1946,7 +2198,7 @@
       "source_file": "venture-studio/scripts/weekly_digest.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "norm_label": "weekly_digest.py",
       "community_name": "weekly_digest.py",
       "id": "venture_studio_scripts_weekly_digest"
@@ -1957,7 +2209,7 @@
       "source_file": "venture-studio/scripts/weekly_digest.py",
       "source_location": "L48",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "norm_label": "get_digest_candidates()",
       "community_name": "weekly_digest.py",
       "id": "venture_studio_scripts_weekly_digest_get_digest_candidates"
@@ -1968,7 +2220,7 @@
       "source_file": "venture-studio/scripts/weekly_digest.py",
       "source_location": "L59",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "norm_label": "get_total_idea_count()",
       "community_name": "weekly_digest.py",
       "id": "venture_studio_scripts_weekly_digest_get_total_idea_count"
@@ -1979,7 +2231,7 @@
       "source_file": "venture-studio/scripts/weekly_digest.py",
       "source_location": "L64",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "norm_label": "get_ideas_this_week()",
       "community_name": "weekly_digest.py",
       "id": "venture_studio_scripts_weekly_digest_get_ideas_this_week"
@@ -1990,7 +2242,7 @@
       "source_file": "venture-studio/scripts/weekly_digest.py",
       "source_location": "L76",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "norm_label": "format_telegram()",
       "community_name": "weekly_digest.py",
       "id": "venture_studio_scripts_weekly_digest_format_telegram"
@@ -2001,7 +2253,7 @@
       "source_file": "venture-studio/scripts/weekly_digest.py",
       "source_location": "L139",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "norm_label": "format_markdown()",
       "community_name": "weekly_digest.py",
       "id": "venture_studio_scripts_weekly_digest_format_markdown"
@@ -2012,7 +2264,7 @@
       "source_file": "venture-studio/scripts/weekly_digest.py",
       "source_location": "L165",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "norm_label": "main()",
       "community_name": "weekly_digest.py",
       "id": "venture_studio_scripts_weekly_digest_main"
@@ -2023,7 +2275,7 @@
       "source_file": "venture-studio/scripts/weekly_digest.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "norm_label": "weekly_digest.py \u2014 surfaces top unacted validated ideas for the weekly digest  t",
       "community_name": "weekly_digest.py",
       "id": "venture_studio_scripts_weekly_digest_rationale_1"
@@ -2034,7 +2286,7 @@
       "source_file": "venture-studio/scripts/weekly_digest.py",
       "source_location": "L49",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "norm_label": "fetch top unacted validated ideas from the digest view.",
       "community_name": "weekly_digest.py",
       "id": "venture_studio_scripts_weekly_digest_rationale_49"
@@ -2045,7 +2297,7 @@
       "source_file": "venture-studio/scripts/weekly_digest.py",
       "source_location": "L77",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "norm_label": "format digest for telegram delivery.",
       "community_name": "weekly_digest.py",
       "id": "venture_studio_scripts_weekly_digest_rationale_77"
@@ -2056,7 +2308,7 @@
       "source_file": "venture-studio/scripts/weekly_digest.py",
       "source_location": "L140",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "norm_label": "format digest as clean markdown.",
       "community_name": "weekly_digest.py",
       "id": "venture_studio_scripts_weekly_digest_rationale_140"
@@ -2462,76 +2714,6 @@
       "id": "builder_os_schema"
     },
     {
-      "label": "Hermes Agent Personal OS",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "hermes agent personal os",
-      "community_name": "Hermes Agent Personal OS",
-      "id": "hermes_agent_root"
-    },
-    {
-      "label": "Hermes Runtime Kernel",
-      "file_type": "concept",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "hermes runtime kernel",
-      "community_name": "Hermes Agent Personal OS",
-      "id": "hermes_runtime"
-    },
-    {
-      "label": "Agent Reach External Service",
-      "file_type": "concept",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "agent reach external service",
-      "community_name": "Hermes Agent Personal OS",
-      "id": "agent_reach_service"
-    },
-    {
-      "label": "Supabase Persistence Layer",
-      "file_type": "concept",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "supabase persistence layer",
-      "community_name": "Hermes Agent Personal OS",
-      "id": "supabase_service"
-    },
-    {
-      "label": "Telegram Delivery Layer",
-      "file_type": "concept",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "telegram delivery layer",
-      "community_name": "Hermes Agent Personal OS",
-      "id": "telegram_service"
-    },
-    {
       "label": "Builder Advisor Skill",
       "file_type": "document",
       "source_file": "builder-os/skills/builder-advisor/SKILL.md",
@@ -2596,7 +2778,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 30,
       "norm_label": "pair programmer application",
       "community_name": "Hermes Agent Personal OS",
       "id": "pair_programmer_app"
@@ -2610,38 +2792,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 30,
       "norm_label": "pair programmer skill",
       "community_name": "Hermes Agent Personal OS",
       "id": "pair_programmer_skills_pair_programmer_skill"
-    },
-    {
-      "label": "Venture Studio Application",
-      "file_type": "document",
-      "source_file": "venture-studio/README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "venture studio application",
-      "community_name": "Hermes Agent Personal OS",
-      "id": "venture_studio_app"
-    },
-    {
-      "label": "Project Roadmap",
-      "file_type": "document",
-      "source_file": "ROADMAP.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "project roadmap",
-      "community_name": "Idea Validator Skill",
-      "id": "roadmap"
     },
     {
       "label": "Venture Studio Application",
@@ -2652,66 +2806,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 28,
       "norm_label": "venture studio application",
       "community_name": "Idea Validator Skill",
       "id": "venture_studio"
-    },
-    {
-      "label": "Agent Reach System",
-      "file_type": "concept",
-      "source_file": "ROADMAP.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "agent reach system",
-      "community_name": "Idea Validator Skill",
-      "id": "agent_reach"
-    },
-    {
-      "label": "Builder OS Application",
-      "file_type": "concept",
-      "source_file": "ROADMAP.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "builder os application",
-      "community_name": "Idea Validator Skill",
-      "id": "builder_os"
-    },
-    {
-      "label": "Work Order Dispatch and Management",
-      "file_type": "rationale",
-      "source_file": "ROADMAP.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "work order dispatch and management",
-      "community_name": "Idea Validator Skill",
-      "id": "work_order_system"
-    },
-    {
-      "label": "Claude Code Platform",
-      "file_type": "concept",
-      "source_file": "ROADMAP.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "claude code platform",
-      "community_name": "Idea Validator Skill",
-      "id": "claude_code_platform"
     },
     {
       "label": "Weekly Digest Synthesis",
@@ -2722,7 +2820,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 28,
       "norm_label": "weekly digest synthesis",
       "community_name": "Idea Validator Skill",
       "id": "weekly_digest_process"
@@ -2732,12 +2830,252 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_hermes_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "readme_hermes_agent",
+      "target": "readme_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "readme_hermes_agent",
+      "target": "readme_license",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "readme_hermes_agent",
+      "target": "readme_planned",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "readme_hermes_agent",
+      "target": "readme_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "readme_hermes_agent",
+      "target": "readme_shared_services_tooling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "readme_hermes_agent",
+      "target": "readme_what_s_here_today",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ROADMAP.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "roadmap",
+      "target": "roadmap_roadmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ROADMAP.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "roadmap_roadmap",
+      "target": "roadmap_done",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ROADMAP.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "roadmap_roadmap",
+      "target": "roadmap_in_progress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ROADMAP.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "roadmap_roadmap",
+      "target": "roadmap_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ROADMAP.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "roadmap_roadmap",
+      "target": "roadmap_open_blocked",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "venture_studio_readme",
+      "target": "venture_studio_readme_venture_studio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "venture_studio_readme_venture_studio",
+      "target": "venture_studio_readme_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "venture_studio_readme_venture_studio",
+      "target": "venture_studio_readme_pdf_reports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "venture_studio_readme_venture_studio",
+      "target": "venture_studio_readme_project_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "venture_studio_readme_venture_studio",
+      "target": "venture_studio_readme_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "venture_studio_readme_venture_studio",
+      "target": "venture_studio_readme_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "venture_studio_readme_venture_studio",
+      "target": "venture_studio_readme_usage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "venture_studio_readme_setup",
+      "target": "venture_studio_readme_1_supabase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "venture_studio_readme_setup",
+      "target": "venture_studio_readme_2_hermes_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "venture_studio_readme_setup",
+      "target": "venture_studio_readme_3_register_the_skill_with_hermes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "venture_studio_readme_setup",
+      "target": "venture_studio_readme_4_telegram_forum_topic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/README.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "venture_studio_readme_setup",
+      "target": "venture_studio_readme_5_evidence_sources",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes"
     },
     {
       "relation": "contains",
@@ -2745,9 +3083,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_acceptable_partial_track_fallback",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_acceptable_partial_track_fallback"
     },
     {
       "relation": "contains",
@@ -2755,9 +3093,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_empty_consolidation_gate",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_empty_consolidation_gate"
     },
     {
       "relation": "contains",
@@ -2765,9 +3103,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_mece_role_architecture_2026_07_04_redesign",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_mece_role_architecture_2026_07_04_redesign"
     },
     {
       "relation": "contains",
@@ -2775,9 +3113,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_persistence_quirks",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_persistence_quirks"
     },
     {
       "relation": "contains",
@@ -2785,9 +3123,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_raw_data_file_paths",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_raw_data_file_paths"
     },
     {
       "relation": "contains",
@@ -2795,9 +3133,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_red_team_py_output_may_contain_trailing_duplicate_json",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_red_team_py_output_may_contain_trailing_duplicate_json"
     },
     {
       "relation": "contains",
@@ -2805,9 +3143,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior"
     },
     {
       "relation": "contains",
@@ -2815,9 +3153,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_save_competitor_database_constraint",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_save_competitor_database_constraint"
     },
     {
       "relation": "contains",
@@ -2825,9 +3163,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_stdout_json_extraction",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_stdout_json_extraction"
     },
     {
       "relation": "contains",
@@ -2835,9 +3173,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_trim_red_team_json_py_helper",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_trim_red_team_json_py_helper"
     },
     {
       "relation": "contains",
@@ -2845,9 +3183,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_model_availability",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_model_availability"
     },
     {
       "relation": "contains",
@@ -2855,9 +3193,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_prompt_assembly",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_prompt_assembly"
     },
     {
       "relation": "contains",
@@ -2865,9 +3203,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_reasoning_channel_responses",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_reasoning_channel_responses"
     },
     {
       "relation": "contains",
@@ -2875,9 +3213,9 @@
       "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior",
-      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_truncation_and_rate_limits_fixed_2026_07_04",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_truncation_and_rate_limits_fixed_2026_07_04"
     },
     {
       "relation": "contains",
@@ -2885,9 +3223,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/trim_red_team_json.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_trim_red_team_json",
-      "target": "venture_studio_skills_idea_validator_scripts_trim_red_team_json_trim",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_trim_red_team_json_trim"
     },
     {
       "relation": "rationale_for",
@@ -2895,39 +3233,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/trim_red_team_json.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_trim_red_team_json_rationale_1",
-      "target": "venture_studio_skills_idea_validator_scripts_trim_red_team_json",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L174",
-      "weight": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L182",
-      "weight": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L164",
-      "weight": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_trim_red_team_json"
     },
     {
       "relation": "imports_from",
@@ -2936,9 +3244,39 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L174",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_write_report",
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L182",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_write_report",
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L164",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_write_report",
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
     },
     {
       "relation": "rationale_for",
@@ -2946,9 +3284,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report_rationale_1",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_write_report"
     },
     {
       "relation": "calls",
@@ -2957,9 +3295,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L283",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report_main",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
     },
     {
       "relation": "rationale_for",
@@ -2967,9 +3305,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report_rationale_165",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
     },
     {
       "relation": "calls",
@@ -2978,9 +3316,9 @@
       "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
       "source_location": "L295",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_write_report_main",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict"
     },
     {
       "relation": "references",
@@ -2990,16 +3328,6 @@
       "source_location": null,
       "weight": 1.0,
       "source": "venture_studio",
-      "target": "venture_studio_skills_idea_validator_skill"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "venture-studio/README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "venture_studio_app",
       "target": "venture_studio_skills_idea_validator_skill"
     },
     {
@@ -5622,106 +5950,6 @@
       "target": "builder_os_skills_builder_advisor_scripts_save_work_order_py"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "hermes_agent_root",
-      "target": "agent_reach_service"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "hermes_agent_root",
-      "target": "hermes_runtime"
-    },
-    {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "hermes_agent_root",
-      "target": "pair_programmer_app"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "hermes_agent_root",
-      "target": "supabase_service"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "hermes_agent_root",
-      "target": "telegram_service"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "hermes_agent_root",
-      "target": "venture_studio_app"
-    },
-    {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "pair-programmer/skills/pair-programmer/SKILL.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "pair_programmer_skills_pair_programmer_skill",
-      "target": "hermes_agent_root"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "venture-studio/.hermes/CONTEXT.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "venture_studio",
-      "target": "supabase_service"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "venture-studio/README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "venture_studio_app",
-      "target": "supabase_service"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "venture-studio/README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "venture_studio_app",
-      "target": "telegram_service"
-    },
-    {
       "relation": "conceptually_related_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -5730,16 +5958,6 @@
       "weight": 1.0,
       "source": "builder_os_skills_builder_advisor_skill",
       "target": "work_order_dispatch_pattern"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/adr/0001-personal-ai-os-philosophy.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "adr_0001_philosophy",
-      "target": "venture_studio_app"
     },
     {
       "relation": "references",
@@ -5755,99 +5973,13 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "ROADMAP.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "roadmap",
-      "target": "agent_reach"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "ROADMAP.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "roadmap",
-      "target": "builder_os"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "ROADMAP.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "roadmap",
-      "target": "venture_studio"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "ROADMAP.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "roadmap",
-      "target": "work_order_system"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "venture-studio/.hermes/CONTEXT.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "venture_studio",
-      "target": "agent_reach"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "venture-studio/.hermes/CONTEXT.md",
       "source_location": null,
       "weight": 1.0,
       "source": "venture_studio",
       "target": "weekly_digest_process"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "ROADMAP.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "builder_os",
-      "target": "work_order_system"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "ROADMAP.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "work_order_system",
-      "target": "claude_code_platform"
     }
   ],
-  "hyperedges": [
-    {
-      "id": "shared_services_architecture",
-      "label": "Shared Services across All Applications",
-      "nodes": [
-        "hermes_runtime",
-        "supabase_service",
-        "telegram_service",
-        "agent_reach_service",
-        "shared_db_py"
-      ],
-      "relation": "participate_in",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
-    }
-  ],
-  "built_at_commit": "44806d867d49533a6e9c5e0f9204520a497c4d36"
+  "hyperedges": [],
+  "built_at_commit": "9dc227a70310dc1b7966aaf5c508edd6d353145a"
 }

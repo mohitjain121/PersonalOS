@@ -70,9 +70,9 @@
     "semantic_hash": "9743f88480de0313f3d25ed1190c5339"
   },
   "README.md": {
-    "mtime": 1782994267.259535,
-    "ast_hash": "6d0842072da78b22a849b07c5202e185",
-    "semantic_hash": "6d0842072da78b22a849b07c5202e185"
+    "mtime": 1783515555.9660206,
+    "ast_hash": "c4fff6133aadba7efb533a93fd5d2672",
+    "semantic_hash": ""
   },
   "builder-os/README.md": {
     "mtime": 1783496867.2926548,
@@ -105,9 +105,9 @@
     "semantic_hash": "130ab071af516397ea29dd1edaa3d001"
   },
   "venture-studio/README.md": {
-    "mtime": 1782411485.447137,
-    "ast_hash": "abdf07048214112080ca730022b9eeb2",
-    "semantic_hash": "abdf07048214112080ca730022b9eeb2"
+    "mtime": 1783515614.2008727,
+    "ast_hash": "03d73a36153aacafb882b9e2b4c2daf8",
+    "semantic_hash": ""
   },
   ".claude/settings.json": {
     "mtime": 1783451400.9936213,
@@ -120,8 +120,8 @@
     "semantic_hash": ""
   },
   "ROADMAP.md": {
-    "mtime": 1783160910.2961457,
-    "ast_hash": "f9ad57e123ecbc52afb21a815b59171e",
+    "mtime": 1783515639.4794886,
+    "ast_hash": "e72459a3c13c9071f24c5d844dc97e11",
     "semantic_hash": ""
   },
   "shared-skills/graphify/references/add-watch.md": {

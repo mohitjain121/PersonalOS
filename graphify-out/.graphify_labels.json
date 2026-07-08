@@ -19,6 +19,7 @@
   "17": "Idea Validator — Debugging & Verification Notes",
   "18": "write_report.py",
   "19": "trim_red_team_json.py",
+  "20": "hermes_agent",
   "21": "graphify reference: add a URL and watch a folder",
   "22": "graphify reference: commit hook and native AGENTS.md integration",
   "23": "graphify reference: incremental update and cluster-only",
@@ -26,5 +27,7 @@
   "25": "graphify reference: transcribe video and audio",
   "26": "CLAUDE.md",
   "27": "extraction-spec.md",
-  "28": "Procedure"
+  "28": "Procedure",
+  "29": "Roadmap",
+  "30": "Pair Programmer Application"
 }

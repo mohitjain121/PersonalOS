@@ -1,16 +1,16 @@
 # Graph Report - hermes_agent  (2026-07-08)
 
 ## Corpus Check
-- 38 files · ~40,142 words
+- 38 files · ~41,337 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 254 nodes · 303 edges · 28 communities (21 shown, 7 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.85)
+- 270 nodes · 308 edges · 31 communities (23 shown, 8 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `44806d86`
+- Built from commit: `9dc227a7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,6 +35,7 @@
 - Idea Validator — Debugging & Verification Notes
 - write_report.py
 - trim_red_team_json.py
+- hermes_agent
 - graphify reference: add a URL and watch a folder
 - graphify reference: commit hook and native AGENTS.md integration
 - graphify reference: incremental update and cluster-only
@@ -43,6 +44,8 @@
 - CLAUDE.md
 - extraction-spec.md
 - Procedure
+- Roadmap
+- Pair Programmer Application
 
 ## God Nodes (most connected - your core abstractions)
 1. `What You Must Do When Invoked` - 12 edges
@@ -53,32 +56,29 @@
 6. `graphify reference: extra exports and benchmark` - 8 edges
 7. `main()` - 8 edges
 8. `main()` - 8 edges
-9. `main()` - 7 edges
-10. `_normalize()` - 7 edges
+9. `hermes_agent` - 7 edges
+10. `venture-studio` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `ADR 0001: Personal AI OS Philosophy` --rationale_for--> `Shared Supabase Client Factory`  [EXTRACTED]
   docs/adr/0001-personal-ai-os-philosophy.md → shared/db.py
-- `Hermes Agent Personal OS` --references--> `Pair Programmer Application`  [INFERRED]
-  README.md → pair-programmer/README.md
-- `Pair Programmer Skill` --references--> `Hermes Agent Personal OS`  [INFERRED]
-  pair-programmer/skills/pair-programmer/SKILL.md → README.md
-- `Venture Studio Application` --shares_data_with--> `Telegram Delivery Layer`  [EXTRACTED]
-  venture-studio/README.md → README.md
-- `ADR 0001: Personal AI OS Philosophy` --rationale_for--> `Venture Studio Application`  [EXTRACTED]
-  docs/adr/0001-personal-ai-os-philosophy.md → venture-studio/README.md
+- `Save Work Order Script` --references--> `Shared Supabase Client Factory`  [EXTRACTED]
+  builder-os/skills/builder-advisor/scripts/save_work_order.py → shared/db.py
+- `Builder Advisor Skill` --references--> `Save Work Order Script`  [EXTRACTED]
+  builder-os/skills/builder-advisor/SKILL.md → builder-os/skills/builder-advisor/scripts/save_work_order.py
+- `Venture Studio Supabase Schema` --shares_data_with--> `Save Idea Script`  [EXTRACTED]
+  venture-studio/supabase/schema.sql → venture-studio/skills/idea-validator/scripts/save_idea.py
+- `Builder OS Supabase Schema` --shares_data_with--> `Save Work Order Script`  [EXTRACTED]
+  builder-os/supabase/schema.sql → builder-os/skills/builder-advisor/scripts/save_work_order.py
 
 ## Import Cycles
 - None detected.
 
-## Hyperedges (group relationships)
-- **Shared Services across All Applications** — hermes_runtime, supabase_service, telegram_service, agent_reach_service, shared_db_py [EXTRACTED 1.00]
-
-## Communities (28 total, 7 thin omitted)
+## Communities (31 total, 8 thin omitted)
 
 ### Community 0 - "Hermes Agent Personal OS"
-Cohesion: 0.10
-Nodes (25): ADR 0001: Personal AI OS Philosophy, Agent Reach System, Agent Reach External Service, Builder OS Application, Builder OS Supabase Schema, Save Work Order Script, Builder Advisor Skill, Claude Code Platform (+17 more)
+Cohesion: 0.33
+Nodes (6): ADR 0001: Personal AI OS Philosophy, Builder OS Supabase Schema, Save Work Order Script, Builder Advisor Skill, Shared Supabase Client Factory, Work Order Dispatch & Verification Pattern
 
 ### Community 1 - "Idea Persistence Layer"
 Cohesion: 0.17
@@ -93,12 +93,12 @@ Cohesion: 0.21
 Nodes (15): complete_work_order(), create_work_order(), delete_work_order(), get_work_order(), list_work_orders(), main(), _now(), save_work_order.py — Supabase persistence for builder-os Work Orders  Called by (+7 more)
 
 ### Community 4 - "save_discovery.py"
-Cohesion: 0.21
-Nodes (11): list_discoveries(), main(), save_discovery.py — Supabase persistence for builder-os  Called by Hermes via ex, Insert a new discovery, return the created row., Update a discovery's review status., List discoveries, optionally filtered by status, most recent first., save_discovery(), update_status() (+3 more)
+Cohesion: 0.12
+Nodes (21): list_discoveries(), main(), save_discovery.py — Supabase persistence for builder-os  Called by Hermes via ex, Insert a new discovery, return the created row., Update a discovery's review status., List discoveries, optionally filtered by status, most recent first., save_discovery(), update_status() (+13 more)
 
 ### Community 5 - "weekly_digest.py"
-Cohesion: 0.27
-Nodes (10): format_markdown(), format_telegram(), get_digest_candidates(), get_ideas_this_week(), get_total_idea_count(), main(), weekly_digest.py — Surfaces top unacted validated ideas for the weekly digest  T, Format digest as clean markdown. (+2 more)
+Cohesion: 0.15
+Nodes (12): 1. Supabase, 2. Hermes `.env`, 3. Register the skill with Hermes, 4. Telegram forum topic, 5. Evidence sources, Architecture, PDF Reports, Project Structure (+4 more)
 
 ### Community 6 - "run_role"
 Cohesion: 0.31
@@ -144,6 +144,10 @@ Nodes (15): Acceptable partial-track fallback, Empty-consolidation gate, Idea Va
 Cohesion: 0.47
 Nodes (5): extract_verdict(), main(), write_report.py — Final report synthesis by Claude on the local subscription  Th, Remove one whole-document ```-fence if the model ignored instructions., strip_outer_fence()
 
+### Community 20 - "hermes_agent"
+Cohesion: 0.25
+Nodes (7): Architecture, hermes_agent, License, Planned, Setup, Shared services & tooling, What's here today
+
 ### Community 21 - "graphify reference: add a URL and watch a folder"
 Cohesion: 0.50
 Nodes (3): For /graphify add, For --watch, graphify reference: add a URL and watch a folder
@@ -157,28 +161,30 @@ Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
 ### Community 28 - "Procedure"
-Cohesion: 0.14
-Nodes (14): Procedure, Step 0 — Parse the idea, Step 1 — Persist the raw idea to Supabase, Step 2 — MECE research committee (shared corpus → 6 specialists → red team), Step 2a — Build the shared evidence corpus (once per idea), Step 2b — Run the six specialist roles (sequentially, one at a time), Step 2c — Red team (mandatory, only after ALL roles are gated), Step 2d — Gap closure (EXACTLY one iteration, then stop) (+6 more)
+Cohesion: 0.10
+Nodes (20): Venture Studio Application, Idea Validator, Pitfalls, Procedure, Step 0 — Parse the idea, Step 1 — Persist the raw idea to Supabase, Step 2 — MECE research committee (shared corpus → 6 specialists → red team), Step 2a — Build the shared evidence corpus (once per idea) (+12 more)
+
+### Community 29 - "Roadmap"
+Cohesion: 0.33
+Nodes (5): Done, In progress, Next, Open / blocked, Roadmap
 
 ## Knowledge Gaps
-- **81 isolated node(s):** `MECE role architecture (2026-07-04 redesign)`, `Prompt assembly`, `Truncation and rate limits (fixed 2026-07-04)`, `Reasoning-channel responses`, `Model availability` (+76 more)
+- **101 isolated node(s):** `Architecture`, `What's here today`, `Shared services & tooling`, `Setup`, `Planned` (+96 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `get_client()` connect `save_discovery.py` to `Idea Persistence Layer`, `save_work_order.py`, `weekly_digest.py`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `Idea Validator` connect `Hermes Agent Personal OS` to `Procedure`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **Why does `Procedure` connect `Procedure` to `Hermes Agent Personal OS`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **What connects `MECE role architecture (2026-07-04 redesign)`, `Prompt assembly`, `Truncation and rate limits (fixed 2026-07-04)` to the rest of the system?**
-  _130 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Hermes Agent Personal OS` be split into smaller, more focused modules?**
-  _Cohesion score 0.09538461538461539 - nodes in this community are weakly interconnected._
+- **Why does `get_client()` connect `save_discovery.py` to `Idea Persistence Layer`, `save_work_order.py`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **What connects `Architecture`, `What's here today`, `Shared services & tooling` to the rest of the system?**
+  _150 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `save_discovery.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.11956521739130435 - nodes in this community are weakly interconnected._
 - **Should `MECE Research Committee` be split into smaller, more focused modules?**
   _Cohesion score 0.08 - nodes in this community are weakly interconnected._
 - **Should `Idea Validator — Debugging & Verification Notes` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
+- **Should `Procedure` be split into smaller, more focused modules?**
+  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
