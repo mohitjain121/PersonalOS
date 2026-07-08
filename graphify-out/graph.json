@@ -22,14 +22,264 @@
   },
   "nodes": [
     {
+      "label": "debugging-and-verification.md",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification",
+      "community": 17,
+      "norm_label": "debugging-and-verification.md"
+    },
+    {
+      "label": "Idea Validator \u2014 Debugging & Verification Notes",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
+      "community": 17,
+      "norm_label": "idea validator \u2014 debugging & verification notes"
+    },
+    {
+      "label": "MECE role architecture (2026-07-04 redesign)",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_mece_role_architecture_2026_07_04_redesign",
+      "community": 17,
+      "norm_label": "mece role architecture (2026-07-04 redesign)"
+    },
+    {
+      "label": "Repaired `multi_model_research.py` behavior",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior",
+      "community": 17,
+      "norm_label": "repaired `multi_model_research.py` behavior"
+    },
+    {
+      "label": "Prompt assembly",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_prompt_assembly",
+      "community": 17,
+      "norm_label": "prompt assembly"
+    },
+    {
+      "label": "Truncation and rate limits (fixed 2026-07-04)",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_truncation_and_rate_limits_fixed_2026_07_04",
+      "community": 17,
+      "norm_label": "truncation and rate limits (fixed 2026-07-04)"
+    },
+    {
+      "label": "Reasoning-channel responses",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_reasoning_channel_responses",
+      "community": 17,
+      "norm_label": "reasoning-channel responses"
+    },
+    {
+      "label": "Model availability",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_model_availability",
+      "community": 17,
+      "norm_label": "model availability"
+    },
+    {
+      "label": "Empty-consolidation gate",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_empty_consolidation_gate",
+      "community": 17,
+      "norm_label": "empty-consolidation gate"
+    },
+    {
+      "label": "Stdout JSON extraction",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_stdout_json_extraction",
+      "community": 17,
+      "norm_label": "stdout json extraction"
+    },
+    {
+      "label": "Persistence quirks",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_persistence_quirks",
+      "community": 17,
+      "norm_label": "persistence quirks"
+    },
+    {
+      "label": "Raw-data file paths",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_raw_data_file_paths",
+      "community": 17,
+      "norm_label": "raw-data file paths"
+    },
+    {
+      "label": "Acceptable partial-track fallback",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_acceptable_partial_track_fallback",
+      "community": 17,
+      "norm_label": "acceptable partial-track fallback"
+    },
+    {
+      "label": "`red_team.py` output may contain trailing duplicate JSON",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_red_team_py_output_may_contain_trailing_duplicate_json",
+      "community": 17,
+      "norm_label": "`red_team.py` output may contain trailing duplicate json"
+    },
+    {
+      "label": "`save-competitor` database constraint",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_save_competitor_database_constraint",
+      "community": 17,
+      "norm_label": "`save-competitor` database constraint"
+    },
+    {
+      "label": "`trim_red_team_json.py` helper",
+      "file_type": "document",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_references_debugging_and_verification_trim_red_team_json_py_helper",
+      "community": 17,
+      "norm_label": "`trim_red_team_json.py` helper"
+    },
+    {
+      "label": "trim_red_team_json.py",
+      "file_type": "code",
+      "source_file": "venture-studio/skills/idea-validator/scripts/trim_red_team_json.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_scripts_trim_red_team_json",
+      "community": 19,
+      "norm_label": "trim_red_team_json.py"
+    },
+    {
+      "label": "trim()",
+      "file_type": "code",
+      "source_file": "venture-studio/skills/idea-validator/scripts/trim_red_team_json.py",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_scripts_trim_red_team_json_trim",
+      "community": 19,
+      "norm_label": "trim()"
+    },
+    {
+      "label": "trim_red_team_json.py  Repair a red_team.json corrupted by a trailing duplicat",
+      "file_type": "rationale",
+      "source_file": "venture-studio/skills/idea-validator/scripts/trim_red_team_json.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_scripts_trim_red_team_json_rationale_1",
+      "community": 19,
+      "norm_label": "trim_red_team_json.py  repair a red_team.json corrupted by a trailing duplicat"
+    },
+    {
+      "label": "write_report.py",
+      "file_type": "code",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report",
+      "community": 18,
+      "norm_label": "write_report.py"
+    },
+    {
+      "label": "strip_outer_fence()",
+      "file_type": "code",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L164",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence",
+      "community": 18,
+      "norm_label": "strip_outer_fence()"
+    },
+    {
+      "label": "extract_verdict()",
+      "file_type": "code",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L174",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict",
+      "community": 18,
+      "norm_label": "extract_verdict()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L182",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_main",
+      "community": 18,
+      "norm_label": "main()"
+    },
+    {
+      "label": "write_report.py \u2014 Final report synthesis by Claude on the local subscription  Th",
+      "file_type": "rationale",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_rationale_1",
+      "community": 18,
+      "norm_label": "write_report.py \u2014 final report synthesis by claude on the local subscription  th"
+    },
+    {
+      "label": "Remove one whole-document ```-fence if the model ignored instructions.",
+      "file_type": "rationale",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L165",
+      "_origin": "ast",
+      "id": "venture_studio_skills_idea_validator_scripts_write_report_rationale_165",
+      "community": 18,
+      "norm_label": "remove one whole-document ```-fence if the model ignored instructions."
+    },
+    {
       "label": "SKILL.md",
       "file_type": "document",
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill",
       "community": 0,
-      "norm_label": "skill.md"
+      "norm_label": "skill.md",
+      "id": "venture_studio_skills_idea_validator_skill"
     },
     {
       "label": "Idea Validator",
@@ -37,9 +287,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L21",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_idea_validator",
       "community": 0,
-      "norm_label": "idea validator"
+      "norm_label": "idea validator",
+      "id": "venture_studio_skills_idea_validator_skill_idea_validator"
     },
     {
       "label": "When to Use",
@@ -47,9 +297,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L23",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_when_to_use",
       "community": 0,
-      "norm_label": "when to use"
+      "norm_label": "when to use",
+      "id": "venture_studio_skills_idea_validator_skill_when_to_use"
     },
     {
       "label": "Procedure",
@@ -57,9 +307,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L38",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_procedure",
       "community": 28,
-      "norm_label": "procedure"
+      "norm_label": "procedure",
+      "id": "venture_studio_skills_idea_validator_skill_procedure"
     },
     {
       "label": "Step 0 \u2014 Parse the idea",
@@ -67,9 +317,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_0_parse_the_idea",
       "community": 28,
-      "norm_label": "step 0 \u2014 parse the idea"
+      "norm_label": "step 0 \u2014 parse the idea",
+      "id": "venture_studio_skills_idea_validator_skill_step_0_parse_the_idea"
     },
     {
       "label": "Step 1 \u2014 Persist the raw idea to Supabase",
@@ -77,9 +327,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L62",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_1_persist_the_raw_idea_to_supabase",
       "community": 28,
-      "norm_label": "step 1 \u2014 persist the raw idea to supabase"
+      "norm_label": "step 1 \u2014 persist the raw idea to supabase",
+      "id": "venture_studio_skills_idea_validator_skill_step_1_persist_the_raw_idea_to_supabase"
     },
     {
       "label": "Step 2 \u2014 MECE research committee (shared corpus \u2192 6 specialists \u2192 red team)",
@@ -87,9 +337,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L77",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team",
       "community": 28,
-      "norm_label": "step 2 \u2014 mece research committee (shared corpus \u2192 6 specialists \u2192 red team)"
+      "norm_label": "step 2 \u2014 mece research committee (shared corpus \u2192 6 specialists \u2192 red team)",
+      "id": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team"
     },
     {
       "label": "Step 2a \u2014 Build the shared evidence corpus (once per idea)",
@@ -97,9 +347,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L96",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_2a_build_the_shared_evidence_corpus_once_per_idea",
       "community": 28,
-      "norm_label": "step 2a \u2014 build the shared evidence corpus (once per idea)"
+      "norm_label": "step 2a \u2014 build the shared evidence corpus (once per idea)",
+      "id": "venture_studio_skills_idea_validator_skill_step_2a_build_the_shared_evidence_corpus_once_per_idea"
     },
     {
       "label": "Step 2b \u2014 Run the six specialist roles (sequentially, one at a time)",
@@ -107,9 +357,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L138",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_2b_run_the_six_specialist_roles_sequentially_one_at_a_time",
       "community": 28,
-      "norm_label": "step 2b \u2014 run the six specialist roles (sequentially, one at a time)"
+      "norm_label": "step 2b \u2014 run the six specialist roles (sequentially, one at a time)",
+      "id": "venture_studio_skills_idea_validator_skill_step_2b_run_the_six_specialist_roles_sequentially_one_at_a_time"
     },
     {
       "label": "Step 2c \u2014 Red team (mandatory, only after ALL roles are gated)",
@@ -117,9 +367,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L157",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_2c_red_team_mandatory_only_after_all_roles_are_gated",
       "community": 28,
-      "norm_label": "step 2c \u2014 red team (mandatory, only after all roles are gated)"
+      "norm_label": "step 2c \u2014 red team (mandatory, only after all roles are gated)",
+      "id": "venture_studio_skills_idea_validator_skill_step_2c_red_team_mandatory_only_after_all_roles_are_gated"
     },
     {
       "label": "Step 2d \u2014 Gap closure (EXACTLY one iteration, then stop)",
@@ -127,9 +377,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L176",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_2d_gap_closure_exactly_one_iteration_then_stop",
       "community": 28,
-      "norm_label": "step 2d \u2014 gap closure (exactly one iteration, then stop)"
+      "norm_label": "step 2d \u2014 gap closure (exactly one iteration, then stop)",
+      "id": "venture_studio_skills_idea_validator_skill_step_2d_gap_closure_exactly_one_iteration_then_stop"
     },
     {
       "label": "Step 3 \u2014 Synthesize the report",
@@ -137,9 +387,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L190",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_3_synthesize_the_report",
       "community": 28,
-      "norm_label": "step 3 \u2014 synthesize the report"
+      "norm_label": "step 3 \u2014 synthesize the report",
+      "id": "venture_studio_skills_idea_validator_skill_step_3_synthesize_the_report"
     },
     {
       "label": "Step 4 \u2014 Generate PDF report",
@@ -147,9 +397,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L272",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_4_generate_pdf_report",
       "community": 28,
-      "norm_label": "step 4 \u2014 generate pdf report"
+      "norm_label": "step 4 \u2014 generate pdf report",
+      "id": "venture_studio_skills_idea_validator_skill_step_4_generate_pdf_report"
     },
     {
       "label": "Step 5 \u2014 Save the research run to Supabase",
@@ -157,9 +407,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L289",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_5_save_the_research_run_to_supabase",
       "community": 28,
-      "norm_label": "step 5 \u2014 save the research run to supabase"
+      "norm_label": "step 5 \u2014 save the research run to supabase",
+      "id": "venture_studio_skills_idea_validator_skill_step_5_save_the_research_run_to_supabase"
     },
     {
       "label": "Step 6 \u2014 Save synthesis, competitors, and idea status to Supabase",
@@ -167,9 +417,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L305",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_6_save_synthesis_competitors_and_idea_status_to_supabase",
       "community": 28,
-      "norm_label": "step 6 \u2014 save synthesis, competitors, and idea status to supabase"
+      "norm_label": "step 6 \u2014 save synthesis, competitors, and idea status to supabase",
+      "id": "venture_studio_skills_idea_validator_skill_step_6_save_synthesis_competitors_and_idea_status_to_supabase"
     },
     {
       "label": "Step 7 \u2014 Send Telegram TL;DR + PDF",
@@ -177,9 +427,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L338",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_7_send_telegram_tl_dr_pdf",
       "community": 28,
-      "norm_label": "step 7 \u2014 send telegram tl;dr + pdf"
+      "norm_label": "step 7 \u2014 send telegram tl;dr + pdf",
+      "id": "venture_studio_skills_idea_validator_skill_step_7_send_telegram_tl_dr_pdf"
     },
     {
       "label": "Step 8 \u2014 Post-verdict watchlist (verdicts must stay falsifiable)",
@@ -187,9 +437,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L377",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_step_8_post_verdict_watchlist_verdicts_must_stay_falsifiable",
       "community": 28,
-      "norm_label": "step 8 \u2014 post-verdict watchlist (verdicts must stay falsifiable)"
+      "norm_label": "step 8 \u2014 post-verdict watchlist (verdicts must stay falsifiable)",
+      "id": "venture_studio_skills_idea_validator_skill_step_8_post_verdict_watchlist_verdicts_must_stay_falsifiable"
     },
     {
       "label": "Pitfalls",
@@ -197,9 +447,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L392",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_pitfalls",
       "community": 0,
-      "norm_label": "pitfalls"
+      "norm_label": "pitfalls",
+      "id": "venture_studio_skills_idea_validator_skill_pitfalls"
     },
     {
       "label": "Verification",
@@ -207,9 +457,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L416",
       "_origin": "ast",
-      "id": "venture_studio_skills_idea_validator_skill_verification",
       "community": 0,
-      "norm_label": "verification"
+      "norm_label": "verification",
+      "id": "venture_studio_skills_idea_validator_skill_verification"
     },
     {
       "label": "README.md",
@@ -750,66 +1000,6 @@
       "community": 10,
       "norm_label": "every fatal/high hidden assumption and every top kill reason from the     red t",
       "id": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_362"
-    },
-    {
-      "label": "write_report.py",
-      "file_type": "code",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 10,
-      "norm_label": "write_report.py",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report"
-    },
-    {
-      "label": "strip_outer_fence()",
-      "file_type": "code",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L164",
-      "_origin": "ast",
-      "community": 10,
-      "norm_label": "strip_outer_fence()",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
-    },
-    {
-      "label": "extract_verdict()",
-      "file_type": "code",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L174",
-      "_origin": "ast",
-      "community": 10,
-      "norm_label": "extract_verdict()",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L182",
-      "_origin": "ast",
-      "community": 10,
-      "norm_label": "main()",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_main"
-    },
-    {
-      "label": "write_report.py \u2014 Final report synthesis by Claude on the local subscription  Th",
-      "file_type": "rationale",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 10,
-      "norm_label": "write_report.py \u2014 final report synthesis by claude on the local subscription  th",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_rationale_1"
-    },
-    {
-      "label": "Remove one whole-document ```-fence if the model ignored instructions.",
-      "file_type": "rationale",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L165",
-      "_origin": "ast",
-      "community": 10,
-      "norm_label": "remove one whole-document ```-fence if the model ignored instructions.",
-      "id": "venture_studio_skills_idea_validator_scripts_write_report_rationale_165"
     },
     {
       "label": "CLAUDE.md",
@@ -2540,6 +2730,259 @@
   ],
   "links": [
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_acceptable_partial_track_fallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_empty_consolidation_gate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_mece_role_architecture_2026_07_04_redesign",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_persistence_quirks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_raw_data_file_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_red_team_py_output_may_contain_trailing_duplicate_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_save_competitor_database_constraint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_stdout_json_extraction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_idea_validator_debugging_verification_notes",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_trim_red_team_json_py_helper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_model_availability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_prompt_assembly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_reasoning_channel_responses",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/references/debugging-and-verification.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_references_debugging_and_verification_repaired_multi_model_research_py_behavior",
+      "target": "venture_studio_skills_idea_validator_references_debugging_and_verification_truncation_and_rate_limits_fixed_2026_07_04",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/trim_red_team_json.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_trim_red_team_json",
+      "target": "venture_studio_skills_idea_validator_scripts_trim_red_team_json_trim",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/trim_red_team_json.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_trim_red_team_json_rationale_1",
+      "target": "venture_studio_skills_idea_validator_scripts_trim_red_team_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_write_report",
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L182",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_write_report",
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_write_report",
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_write_report",
+      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_write_report_rationale_1",
+      "target": "venture_studio_skills_idea_validator_scripts_write_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L283",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_write_report_main",
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_write_report_rationale_165",
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
+      "source_location": "L295",
+      "weight": 1.0,
+      "source": "venture_studio_skills_idea_validator_scripts_write_report_main",
+      "target": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -2565,9 +3008,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill",
-      "target": "venture_studio_skills_idea_validator_skill_idea_validator",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_idea_validator"
     },
     {
       "relation": "contains",
@@ -2575,9 +3018,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L392",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_idea_validator",
-      "target": "venture_studio_skills_idea_validator_skill_pitfalls",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_pitfalls"
     },
     {
       "relation": "contains",
@@ -2585,9 +3028,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_idea_validator",
-      "target": "venture_studio_skills_idea_validator_skill_procedure",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_procedure"
     },
     {
       "relation": "contains",
@@ -2595,9 +3038,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L416",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_idea_validator",
-      "target": "venture_studio_skills_idea_validator_skill_verification",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_verification"
     },
     {
       "relation": "contains",
@@ -2605,9 +3048,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_idea_validator",
-      "target": "venture_studio_skills_idea_validator_skill_when_to_use",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_when_to_use"
     },
     {
       "relation": "contains",
@@ -2615,9 +3058,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_0_parse_the_idea",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_0_parse_the_idea"
     },
     {
       "relation": "contains",
@@ -2625,9 +3068,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_1_persist_the_raw_idea_to_supabase",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_1_persist_the_raw_idea_to_supabase"
     },
     {
       "relation": "contains",
@@ -2635,9 +3078,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team"
     },
     {
       "relation": "contains",
@@ -2645,9 +3088,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L190",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_3_synthesize_the_report",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_3_synthesize_the_report"
     },
     {
       "relation": "contains",
@@ -2655,9 +3098,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L272",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_4_generate_pdf_report",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_4_generate_pdf_report"
     },
     {
       "relation": "contains",
@@ -2665,9 +3108,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L289",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_5_save_the_research_run_to_supabase",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_5_save_the_research_run_to_supabase"
     },
     {
       "relation": "contains",
@@ -2675,9 +3118,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L305",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_6_save_synthesis_competitors_and_idea_status_to_supabase",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_6_save_synthesis_competitors_and_idea_status_to_supabase"
     },
     {
       "relation": "contains",
@@ -2685,9 +3128,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L338",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_7_send_telegram_tl_dr_pdf",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_7_send_telegram_tl_dr_pdf"
     },
     {
       "relation": "contains",
@@ -2695,9 +3138,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L377",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_procedure",
-      "target": "venture_studio_skills_idea_validator_skill_step_8_post_verdict_watchlist_verdicts_must_stay_falsifiable",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_8_post_verdict_watchlist_verdicts_must_stay_falsifiable"
     },
     {
       "relation": "contains",
@@ -2705,9 +3148,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team",
-      "target": "venture_studio_skills_idea_validator_skill_step_2a_build_the_shared_evidence_corpus_once_per_idea",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_2a_build_the_shared_evidence_corpus_once_per_idea"
     },
     {
       "relation": "contains",
@@ -2715,9 +3158,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L138",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team",
-      "target": "venture_studio_skills_idea_validator_skill_step_2b_run_the_six_specialist_roles_sequentially_one_at_a_time",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_2b_run_the_six_specialist_roles_sequentially_one_at_a_time"
     },
     {
       "relation": "contains",
@@ -2725,9 +3168,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L157",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team",
-      "target": "venture_studio_skills_idea_validator_skill_step_2c_red_team_mandatory_only_after_all_roles_are_gated",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_2c_red_team_mandatory_only_after_all_roles_are_gated"
     },
     {
       "relation": "contains",
@@ -2735,9 +3178,9 @@
       "source_file": "venture-studio/skills/idea-validator/SKILL.md",
       "source_location": "L176",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_skill_step_2_mece_research_committee_shared_corpus_6_specialists_red_team",
-      "target": "venture_studio_skills_idea_validator_skill_step_2d_gap_closure_exactly_one_iteration_then_stop",
-      "confidence_score": 1.0
+      "target": "venture_studio_skills_idea_validator_skill_step_2d_gap_closure_exactly_one_iteration_then_stop"
     },
     {
       "relation": "contains",
@@ -3314,17 +3757,6 @@
       "target": "venture_studio_skills_idea_validator_scripts_verify_research_data"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L49",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -3532,17 +3964,6 @@
     {
       "relation": "calls",
       "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L325",
-      "weight": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report_main",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_report_quotes"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "venture-studio/skills/idea-validator/scripts/verify_research_data.py",
       "source_location": "L455",
@@ -3581,89 +4002,6 @@
       "confidence_score": 1.0,
       "source": "venture_studio_skills_idea_validator_scripts_verify_research_data_rationale_362",
       "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_finding_coverage"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L312",
-      "weight": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report_main",
-      "target": "venture_studio_skills_idea_validator_scripts_verify_research_data_check_finding_coverage"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L174",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L182",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_main"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L164",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report_rationale_1",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L276",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report_main",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L165",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report_rationale_165",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_strip_outer_fence"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "venture-studio/skills/idea-validator/scripts/write_report.py",
-      "source_location": "L288",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "venture_studio_skills_idea_validator_scripts_write_report_main",
-      "target": "venture_studio_skills_idea_validator_scripts_write_report_extract_verdict"
     },
     {
       "relation": "contains",
@@ -5511,5 +5849,5 @@
       "source_file": "README.md"
     }
   ],
-  "built_at_commit": "ab0cdf7332ab7678f48a6efab85e4a5db600d377"
+  "built_at_commit": "44806d867d49533a6e9c5e0f9204520a497c4d36"
 }

@@ -1,16 +1,16 @@
 # Graph Report - hermes_agent  (2026-07-08)
 
 ## Corpus Check
-- 38 files · ~40,080 words
+- 38 files · ~40,142 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 235 nodes · 288 edges · 25 communities (19 shown, 6 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.82)
+- 254 nodes · 303 edges · 28 communities (21 shown, 7 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ab0cdf73`
+- Built from commit: `44806d86`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -32,6 +32,9 @@
 - Venture Studio Supabase Schema
 - Claude Code CLI for Work Order Dispatch
 - PDF Report Generation
+- Idea Validator — Debugging & Verification Notes
+- write_report.py
+- trim_red_team_json.py
 - graphify reference: add a URL and watch a folder
 - graphify reference: commit hook and native AGENTS.md integration
 - graphify reference: incremental update and cluster-only
@@ -43,15 +46,15 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `What You Must Do When Invoked` - 12 edges
-2. `Procedure` - 10 edges
-3. `/graphify` - 10 edges
-4. `main()` - 8 edges
-5. `graphify reference: extra exports and benchmark` - 8 edges
-6. `main()` - 8 edges
+2. `Idea Validator — Debugging & Verification Notes` - 11 edges
+3. `Procedure` - 10 edges
+4. `/graphify` - 10 edges
+5. `main()` - 8 edges
+6. `graphify reference: extra exports and benchmark` - 8 edges
 7. `main()` - 8 edges
-8. `main()` - 7 edges
-9. `_normalize()` - 7 edges
-10. `Hermes Agent Personal OS` - 7 edges
+8. `main()` - 8 edges
+9. `main()` - 7 edges
+10. `_normalize()` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `ADR 0001: Personal AI OS Philosophy` --rationale_for--> `Shared Supabase Client Factory`  [EXTRACTED]
@@ -71,7 +74,7 @@
 ## Hyperedges (group relationships)
 - **Shared Services across All Applications** — hermes_runtime, supabase_service, telegram_service, agent_reach_service, shared_db_py [EXTRACTED 1.00]
 
-## Communities (25 total, 6 thin omitted)
+## Communities (28 total, 7 thin omitted)
 
 ### Community 0 - "Hermes Agent Personal OS"
 Cohesion: 0.10
@@ -114,8 +117,8 @@ Cohesion: 0.22
 Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
 
 ### Community 10 - "write_report.py"
-Cohesion: 0.13
-Nodes (25): check_entity_grounding(), check_finding_coverage(), check_quote_grounding(), check_raw_data(), check_report_quotes(), check_synthesis_output(), _extract_quotes_from_json(), _find_quotes() (+17 more)
+Cohesion: 0.18
+Nodes (20): check_entity_grounding(), check_finding_coverage(), check_quote_grounding(), check_raw_data(), check_report_quotes(), check_synthesis_output(), _extract_quotes_from_json(), _find_quotes() (+12 more)
 
 ### Community 11 - "red_team.py"
 Cohesion: 0.50
@@ -132,6 +135,14 @@ Nodes (3): generate_pdf(), main(), generate_pdf.py — Generates a formatted PDF
 ### Community 16 - "PDF Report Generation"
 Cohesion: 0.33
 Nodes (5): For /graphify explain, For /graphify path, graphify reference: query, path, explain, Step 0 — Constrained query expansion (REQUIRED before traversal), Step 1 — Traversal
+
+### Community 17 - "Idea Validator — Debugging & Verification Notes"
+Cohesion: 0.12
+Nodes (15): Acceptable partial-track fallback, Empty-consolidation gate, Idea Validator — Debugging & Verification Notes, MECE role architecture (2026-07-04 redesign), Model availability, Persistence quirks, Prompt assembly, Raw-data file paths (+7 more)
+
+### Community 18 - "write_report.py"
+Cohesion: 0.47
+Nodes (5): extract_verdict(), main(), write_report.py — Final report synthesis by Claude on the local subscription  Th, Remove one whole-document ```-fence if the model ignored instructions., strip_outer_fence()
 
 ### Community 21 - "graphify reference: add a URL and watch a folder"
 Cohesion: 0.50
@@ -150,24 +161,24 @@ Cohesion: 0.14
 Nodes (14): Procedure, Step 0 — Parse the idea, Step 1 — Persist the raw idea to Supabase, Step 2 — MECE research committee (shared corpus → 6 specialists → red team), Step 2a — Build the shared evidence corpus (once per idea), Step 2b — Run the six specialist roles (sequentially, one at a time), Step 2c — Red team (mandatory, only after ALL roles are gated), Step 2d — Gap closure (EXACTLY one iteration, then stop) (+6 more)
 
 ## Knowledge Gaps
-- **68 isolated node(s):** `When to Use`, `Step 0 — Parse the idea`, `Step 1 — Persist the raw idea to Supabase`, `Step 2a — Build the shared evidence corpus (once per idea)`, `Step 2b — Run the six specialist roles (sequentially, one at a time)` (+63 more)
+- **81 isolated node(s):** `MECE role architecture (2026-07-04 redesign)`, `Prompt assembly`, `Truncation and rate limits (fixed 2026-07-04)`, `Reasoning-channel responses`, `Model availability` (+76 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `get_client()` connect `save_discovery.py` to `Idea Persistence Layer`, `save_work_order.py`, `weekly_digest.py`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Why does `Idea Validator` connect `Hermes Agent Personal OS` to `Procedure`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **Why does `Procedure` connect `Procedure` to `Hermes Agent Personal OS`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **What connects `When to Use`, `Step 0 — Parse the idea`, `Step 1 — Persist the raw idea to Supabase` to the rest of the system?**
-  _116 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+- **What connects `MECE role architecture (2026-07-04 redesign)`, `Prompt assembly`, `Truncation and rate limits (fixed 2026-07-04)` to the rest of the system?**
+  _130 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Hermes Agent Personal OS` be split into smaller, more focused modules?**
   _Cohesion score 0.09538461538461539 - nodes in this community are weakly interconnected._
 - **Should `MECE Research Committee` be split into smaller, more focused modules?**
   _Cohesion score 0.08 - nodes in this community are weakly interconnected._
-- **Should `write_report.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.1339031339031339 - nodes in this community are weakly interconnected._
+- **Should `Idea Validator — Debugging & Verification Notes` be split into smaller, more focused modules?**
+  _Cohesion score 0.125 - nodes in this community are weakly interconnected._
